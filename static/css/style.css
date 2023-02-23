@@ -1,0 +1,149 @@
+body {
+    font-size: 10px
+}
+
+#branding {
+    position: fixed;
+    top: 16px;
+    right: 14px;
+    z-index: 99;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#helios {
+    font-size: 30px;
+    color: blue;
+}
+
+#for {
+    font-size: 15px;
+    color: gray;
+}
+
+#cwix {
+    font-size: 22px;
+    color: black;
+}
+
+#board-content {
+    /* background-color: rgba(225, 225, 225, 0.54); */
+    min-height: 250px;
+    border-radius: 4px;
+}
+
+.mainContainer {
+    background-color: #efefef;
+    height: 93vh;
+    overflow-y: scroll !important;
+}
+
+#main-header {
+    position: relative !important;
+    padding: 5px;
+}
+
+a {
+    outline: none !important;
+}
+
+.select2-selection__choice {
+    display: none !important;
+}
+
+.textWidget {
+    color: black !important;
+}
+
+.select2-search__field {
+    background-color: white;
+    color: gray;
+}
+
+#tabs {
+    height: 100%;
+}
+
+#freeboardContent {
+    height: fit-content;
+}
+
+
+.counterWidget_numbers {
+    font-size: 20px;
+    height: 27px;
+}
+
+.counterWidget_numbers td {
+    border-left: 35px solid white !important;
+    border-right: 35px solid white !important;
+}
+
+.counterWidget_labels {
+    font-size: 13px;
+}
+
+.counterWidget_labels td {
+    /* border-left: 10px solid white; */
+    /* border-right: 10px solid white; */
+}
+
+.counterWidget {
+    text-align: center;
+}
+
+input {
+    background-color: rgb(220, 220, 220) !important;
+    color: rgb(55, 55, 55) !important;
+}
+
+.land-bg-color {
+    background-color: #008000;
+}
+
+.maritime-bg-color {
+    background-color: #000080;
+}
+
+.air-bg-color {
+    background-color: #72A0C1;
+}
+
+.space-bg-color {
+    background-color: #000050;
+}
+
+.cyber-bg-color {
+    background-color: #818286;
+}
+
+.land-color {
+    color: #008000;
+}
+
+.maritime-color {
+    color: #000080;
+}
+
+.air-color {
+    color: #72A0C1;
+}
+
+.space-color {
+    color: #000050;
+}
+
+.cyber-color {
+    color: #818286;
+}
+
+/* always show scrollbar */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }

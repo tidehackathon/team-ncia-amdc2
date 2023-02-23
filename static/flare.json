@@ -1,0 +1,1422 @@
+[
+    {
+      "name": "flare.ModelDev.3dsMax",
+      "nameOriginal": "3dsMax",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.AutoCAD","flare.Visualizations.KeyShot","flare.Visualizations.MarmosetToolbag","flare.Visualizations.Redshift","flare.ModelDev.Maya","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.Graphics.Illustrator","flare.MaterialDev.SubstancePainter","flare.MaterialDev.SubstanceB2M","flare.MaterialDev.SubstancePlayer","flare.MaterialDev.SubstanceDesigner"],
+      "developer": "Autodesk",
+      "link": "https://www.autodesk.com/products/3ds-max/overview",
+      "fileTypesIncoming": [ "fbx", "dwg"],
+      "fileTypesOutgoing": [ "dxf"]
+    },
+    {
+      "name": "flare.Graphics.Acrobat",
+      "nameOriginal": "Acrobat",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.Graphics.AffinityDesigner","flare.Graphics.AffinityPhoto","flare.AEC.ArchiCAD","flare.AEC.AutoCAD","flare.Graphics.BluebeamRevu","flare.Graphics.Illustrator","flare.Graphics.InDesign","flare.Graphics.Photoshop","flare.OfficeTools.Word","flare.OfficeTools.Excel","flare.OfficeTools.PowerPoint","flare.DataManagement.dRofus"],
+      "developer": "Adobe",
+      "link": "https://acrobat.adobe.com/us/en/acrobat/acrobat-pro.html",
+      "fileTypesIncoming": [ "jpeg", "png"],
+      "fileTypesOutgoing": [ "pdf"]
+    },
+    {
+      "name": "flare.Graphics.AffinityDesigner",
+      "nameOriginal": "AffinityDesigner",
+      "size": 0,
+      "imports": [ "flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.Acrobat","flare.MaterialDev.SubstancePlayer","flare.MaterialDev.SubstanceB2M","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.AEC.Revit","flare.AEC.AutoCAD","flare.Graphics.InDesign","flare.ProcessDev.HTML"],
+      "developer": "Affinity",
+      "link": "https://affinity.serif.com/en-us/designer/"
+    },
+    {
+      "name": "flare.Graphics.AffinityPhoto",
+      "nameOriginal": "AffinityPhoto",
+      "size": 0,
+      "imports": [ "flare.Graphics.AffinityDesigner","flare.Graphics.Photoshop","flare.Graphics.Illustrator","flare.Graphics.Acrobat","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.AEC.Revit","flare.AEC.AutoCAD","flare.ProcessDev.HTML"],
+      "developer": "Affinity",
+      "link": "https://affinity.serif.com/en-us/photo/"
+    },
+    {
+      "name": "flare.DataManagement.Airtable",
+      "nameOriginal": "Airtable",
+      "size": 0,
+      "imports": [ "flare.DataManagement.MySQL","flare.OfficeTools.Excel","flare.DataManagement.Box","flare.DataManagement.Dropbox","flare.DataManagement.Evernote","flare.ProcessDev.GitHub","flare.DataManagement.GoogleDrive","flare.ProcessDev.WordPress"],
+      "developer": "AirTable",
+      "link": "https://airtable.com/integrations"
+    },
+    {
+      "name": "flare.ProcessDev.AndroidStudio",
+      "nameOriginal": "AndroidStudio",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.ProcessDev.VisualStudio"],
+      "developer": "Google",
+      "link": "https://developer.android.com/studio/"
+    },
+    {
+      "name": "flare.Visualizations.Anima",
+      "nameOriginal": "Anima",
+      "size": 0,
+      "imports": [ "flare.ModelDev.3dsMax","flare.Visualizations.VRay","flare.Visualizations.Redshift"],
+      "developer": "AXYZ",
+      "link": "https://secure.axyz-design.com/anima-crowd-simulation-software-home"
+    },
+    {
+      "name": "flare.AEC.ArchiCAD",
+      "nameOriginal": "ArchiCAD",
+      "size": 0,
+      "imports": [ "flare.AEC.AutoCAD","flare.AEC.Revit","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.AEC.Navisworks","flare.AEC.Microstation"],
+      "developer": "GraphiSoft",
+      "link": "http://www.graphisoft.com/archicad/"
+    },
+    {
+      "name": "flare.MixedReality.ARKit",
+      "nameOriginal": "ARKit",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.XCode","flare.GameEngine.Unity"],
+      "developer": "Apple",
+      "link": "https://developer.apple.com/arkit/"
+    },
+    {
+      "name": "flare.AEC.AutoCAD",
+      "nameOriginal": "AutoCAD",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.ModelDev.3dsMax","flare.Graphics.Acrobat","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.OfficeTools.Excel","flare.AEC.Rhino","flare.AEC.Civil3D","flare.AEC.ReCap","flare.AEC.Microstation"],
+      "developer": "Autodesk",
+      "link": "https://www.autodesk.com/products/autocad/overview"
+    },
+    {
+      "name": "flare.ProcessDev.BitBucket",
+      "nameOriginal": "BitBucket",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Jira","flare.Communication.Trello","flare.DataManagement.AmazonWebServices","flare.GameEngine.UnityCloudBuild"],
+      "developer": "Atlassian",
+      "link": "https://bitbucket.org/product/integrations"
+    },
+    {
+      "name": "flare.ModelDev.Blender",
+      "nameOriginal": "Blender",
+      "size": 0,
+      "imports": [ "flare.Visualizations.MarmosetToolbag","flare.Visualizations.KeyShot","flare.Visualizations.Redshift","flare.ProcessDev.Python","flare.Graphics.Photoshop","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.Graphics.AffinityPhoto"],
+      "developer": "Blender Foundation",
+      "link": "https://www.blender.org/"
+    },
+    {
+      "name": "flare.Graphics.BluebeamRevu",
+      "nameOriginal": "BluebeamRevu",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.OfficeTools.Word","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.InDesign","flare.Graphics.AffinityDesigner","flare.DataManagement.dRofus"],
+      "developer": "Nemetschek Co.",
+      "link": "https://www.bluebeam.com/"
+    },
+    {
+      "name": "flare.ProcessDev.CSharp",
+      "nameOriginal": "CSharp",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.ProcessDev.VisualStudio"],
+      "developer": "Microsoft",
+      "link": "https://docs.microsoft.com/en-us/dotnet/csharp/"
+    },
+    {
+      "name": "flare.ProcessDev.CPlusPlus",
+      "nameOriginal": "CPlusPlus",
+      "size": 0,
+      "imports": [ "flare.GameEngine.UnrealEngine"],
+      "developer": "Bjarne Stroustrup",
+      "link": "http://www.cplusplus.com/"
+    },
+    {
+      "name": "flare.AEC.CATIA",
+      "nameOriginal": "CATIA",
+      "size": 0,
+      "imports": [ "flare.AEC.Rhino","flare.AEC.AutoCAD","flare.AEC.Revit"],
+      "developer": "Dassault Systemes",
+      "link": "https://www.3ds.com/products-services/catia/products/v5/portfolio/"
+    },
+    {
+      "name": "flare.ProcessDev.CMake",
+      "nameOriginal": "CMake",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.CSharp","flare.ProcessDev.CPlusPlus","flare.ProcessDev.CLion"],
+      "developer": "Open Source",
+      "link": "https://cmake.org/"
+    },
+    {
+      "name": "flare.ProcessDev.Cordova",
+      "nameOriginal": "Cordova",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.PhoneGap","flare.ProcessDev.HTML","flare.ProcessDev.CSS","flare.ProcessDev.JavaScript","flare.ProcessDev.ReactJS","flare.ProcessDev.D3"],
+      "developer": "Apache",
+      "link": "https://cordova.apache.org/"
+    },
+    {
+      "name": "flare.ProcessDev.CSS",
+      "nameOriginal": "CSS",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.HTML","flare.ProcessDev.JavaScript","flare.ProcessDev.Cordova","flare.ProcessDev.Dreamweaver"],
+      "developer": "WWW Consortium",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "name": "flare.ProcessDev.D3",
+      "nameOriginal": "D3",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.ProcessDev.CSS","flare.OfficeTools.Excel"],
+      "developer": "Mike Bostock",
+      "link": "https://d3js.org/"
+    },
+    {
+      "name": "flare.OfficeTools.Delve",
+      "nameOriginal": "Delve",
+      "size": 0,
+      "imports": [ "flare.DataManagement.OneDrive","flare.OfficeTools.Excel","flare.OfficeTools.Word","flare.OfficeTools.PowerPoint","flare.DataManagement.Access"],
+      "developer": "Microsoft",
+      "link": "https://support.office.com/en-us/article/what-is-office-delve-1315665a-c6af-4409-a28d-49f8916878ca"
+    },
+    {
+      "name": "flare.AEC.Diva",
+      "nameOriginal": "Diva",
+      "size": 0,
+      "imports": [ "flare.AEC.Grasshopper","flare.AEC.Rhino"],
+      "developer": "Solemma",
+      "link": "http://solemma.net/Diva.html"
+    },
+    {
+      "name": "flare.ProcessDev.Dreamweaver",
+      "nameOriginal": "Dreamweaver",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.HTML","flare.ProcessDev.CSS","flare.ProcessDev.JavaScript","flare.ProcessDev.GitHub"],
+      "developer": "Adobe",
+      "link": "https://www.adobe.com/products/dreamweaver.html"
+    },
+    {
+      "name": "flare.DataManagement.dRofus",
+      "nameOriginal": "dRofus",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.OfficeTools.Excel","flare.ProcessDev.FMEServer","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.ProcessDev.XFDesigner"],
+      "developer": "Nemetschek",
+      "link": "http://www.drofus.no/en/"
+    },
+    {
+      "name": "flare.AEC.Dynamo",
+      "nameOriginal": "Dynamo",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.ProcessDev.Python","flare.OfficeTools.Excel"],
+      "developer": "Open Source",
+      "link": "http://dynamobim.org/"
+    },
+    {
+      "name": "flare.Visualizations.Enscape",
+      "nameOriginal": "Enscape",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.Rhino","flare.ModelDev.SketchUp","flare.Graphics.Photoshop","flare.Graphics.InDesign","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.Graphics.AffinityPhoto"],
+      "developer": "Enscape",
+      "link": "https://enscape3d.com/"
+    },
+    {
+      "name": "flare.DataManagement.Evernote",
+      "nameOriginal": "Evernote",
+      "size": 0,
+      "imports": [ "flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.DataManagement.GoogleDrive"],
+      "developer": "Evernote",
+      "link": "https://evernote.com/"
+    },
+    {
+      "name": "flare.OfficeTools.Excel",
+      "nameOriginal": "Excel",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.Word","flare.DataManagement.PowerBI","flare.OfficeTools.PowerPoint","flare.ProcessDev.FMEServer","flare.DataManagement.dRofus","flare.DataManagement.Access","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.AEC.Revit","flare.AEC.Dynamo","flare.AEC.AutoCAD","flare.AEC.Grasshopper"],
+      "developer": "Microsoft",
+      "link": "https://products.office.com/en-us/excel"
+    },
+    {
+      "name": "flare.ProcessDev.FMEServer",
+      "nameOriginal": "FMEServer",
+      "size": 0,
+      "imports": [ "flare.AEC.ArchiCAD","flare.AEC.ArcGIS","flare.OfficeTools.Excel","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.DataManagement.AmazonWebServices","flare.DataManagement.Tableau","flare.DataManagement.GoogleDrive","flare.AEC.AutoCAD","flare.Graphics.Acrobat","flare.AEC.Revit","flare.AEC.Microstation","flare.Graphics.Illustrator","flare.AEC.Civil3D","flare.ModelDev.3dsMax","flare.AEC.ReCap","flare.DataManagement.Box","flare.DataManagement.Dropbox","flare.ProcessDev.GitHub","flare.DataManagement.Access","flare.DataManagement.OneDrive","flare.ModelDev.SketchUp","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.ModelDev.Maya"],
+      "developer": "Safe Software",
+      "link": "https://www.safe.com/"
+    },
+    {
+      "name": "flare.AEC.GeometryGym",
+      "nameOriginal": "GeometryGym",
+      "size": 0,
+      "imports": [ "flare.AEC.Grasshopper","flare.AEC.Rhino","flare.AEC.Revit","flare.AEC.Navisworks","flare.AEC.Solibri"],
+      "developer": "Geometry Gym Pty Ltd.",
+      "link": "https://geometrygym.wordpress.com/"
+    },
+    {
+      "name": "flare.ProcessDev.GitHub",
+      "nameOriginal": "GitHub",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.VisualStudio","flare.ProcessDev.Dreamweaver","flare.ProcessDev.CLion","flare.ProcessDev.CSharp","flare.ProcessDev.CPlusPlus","flare.ProcessDev.CSS","flare.ProcessDev.ReactJS","flare.ProcessDev.JavaScript","flare.GameEngine.UnityCloudBuild","flare.ProcessDev.BitBucket","flare.DataManagement.AmazonWebServices","flare.DataManagement.Jira"],
+      "developer": "GitHub Inc.",
+      "link": "https://circleci.com/integrations/github/?utm_source=gnb&utm_medium=SEM&utm_campaign=SEM-gnb-Github-Eng-ni&utm_content=SEM-gnb-Github-Eng-ni-Github&gclid=EAIaIQobChMIv6PK26L82gIV0luGCh1NzA0jEAAYASAAEgJmwvD_BwE"
+    },
+    {
+      "name": "flare.DataManagement.GoogleDrive",
+      "nameOriginal": "GoogleDrive",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Airtable"],
+      "developer": "Google",
+      "link": "https://www.google.com/drive/using-drive/"
+    },
+    {
+      "name": "flare.AEC.Grasshopper",
+      "nameOriginal": "Grasshopper",
+      "size": 0,
+      "imports": [ "flare.AEC.Rhino","flare.AEC.Diva","flare.AEC.Salamander"],
+      "developer": "McNeel",
+      "link": "http://www.grasshopper3d.com/"
+    },
+    {
+      "name": "flare.MixedReality.GravitySketch",
+      "nameOriginal": "GravitySketch",
+      "size": 0,
+      "imports": [ "flare.MixedReality.ViveHMD","flare.AEC.Rhino","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.MixedReality.LeapMotionHMD"],
+      "developer": "Gravity Sketch",
+      "link": "https://www.gravitysketch.com"
+    },
+    {
+      "name": "flare.AEC.Hatch22",
+      "nameOriginal": "Hatch22",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit"],
+      "developer": "Mertens3d",
+      "link": "http://mertens3d.com/tools/tools.php"
+    },
+    {
+      "name": "flare.MixedReality.HoloLensHMD",
+      "nameOriginal": "HoloLensHMD",
+      "size": 0,
+      "imports": [ "flare.AEC.TrimbleConnect","flare.MixedReality.HoloStream","flare.MixedReality.HoloLive","flare.GameEngine.Unity","flare.ProcessDev.CSharp","flare.ProcessDev.VisualStudio","flare.MixedReality.Vuforia"],
+      "developer": "Microsoft",
+      "link": "https://www.microsoft.com/en-us/hololens"
+    },
+    {
+      "name": "flare.MixedReality.HoloLive",
+      "nameOriginal": "HoloLive",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.Navisworks","flare.MixedReality.HoloLensHMD"],
+      "developer": "VisuaLive3D",
+      "link": "https://www.visualive3d.com/download"
+    },
+    {
+      "name": "flare.MixedReality.HoloStream",
+      "nameOriginal": "HoloStream",
+      "size": 0,
+      "imports": [ "flare.MixedReality.HoloLensHMD"],
+      "developer": "Kazendi Ltd.",
+      "link": "https://itunes.apple.com/us/app/holostream/id1182343438?mt=8"
+    },
+    {
+      "name": "flare.MixedReality.ViveHMD",
+      "nameOriginal": "ViveHMD",
+      "size": 0,
+      "imports": [ "flare.Visualizations.Enscape","flare.Visualizations.Twinmotion","flare.MixedReality.GravitySketch","flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.MixedReality.Prospect","flare.MixedReality.SteamVR","flare.MixedReality.TPCast","flare.MixedReality.ViveTracker","flare.MixedReality.LeapMotionHMD"],
+      "developer": "HTC",
+      "link": "https://www.vive.com/us/"
+    },
+    {
+      "name": "flare.ProcessDev.HTML",
+      "nameOriginal": "HTML",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.Dreamweaver","flare.ProcessDev.VisualStudio","flare.ProcessDev.CSS","flare.ProcessDev.JavaScript"],
+      "developer": "WWW Consortium",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+      "name": "flare.Graphics.Illustrator",
+      "nameOriginal": "Illustrator",
+      "size": 0,
+      "imports": [ "flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.AEC.Revit"],
+      "developer": "Adobe",
+      "link": "https://www.adobe.com/products/illustrator.html"
+    },
+    {
+      "name": "flare.Graphics.InDesign",
+      "nameOriginal": "InDesign",
+      "size": 0,
+      "imports": [ "flare.Graphics.Acrobat","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.Graphics.BluebeamRevu"],
+      "developer": "Adobe",
+      "link": "https://www.adobe.com/products/indesign.html"
+    },
+    {
+      "name": "flare.AEC.InSight360",
+      "nameOriginal": "InSight360",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit"],
+      "developer": "Autodesk",
+      "link": "https://insight.autodesk.com/oneenergy"
+    },
+    {
+      "name": "flare.GameEngine.InstaLOD",
+      "nameOriginal": "InstaLOD",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.GameEngine.UnrealEngine","flare.ProcessDev.CPlusPlus"],
+      "developer": "InstaLOD",
+      "link": "http://www.instalod.com/"
+    },
+    {
+      "name": "flare.MixedReality.Prospect",
+      "nameOriginal": "Prospect",
+      "size": 0,
+      "imports": [ "flare.ModelDev.SketchUp","flare.AEC.Revit","flare.AEC.Rhino","flare.AEC.Grasshopper"],
+      "developer": "IrisVR",
+      "link": "https://irisvr.com/prospect"
+    },
+    {
+      "name": "flare.Communication.Jabber",
+      "nameOriginal": "Jabber",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.Word"],
+      "developer": "Cisco",
+      "link": "https://www.cisco.com/c/en/us/products/unified-communications/jabber/index.html"
+    },
+    {
+      "name": "flare.ProcessDev.JavaScript",
+      "nameOriginal": "JavaScript",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.D3","flare.ProcessDev.HTML","flare.ProcessDev.CSS","flare.ProcessDev.ReactJS","flare.ProcessDev.NodeJS"],
+      "developer": "Mozilla/Ecma",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "name": "flare.Communication.Jing",
+      "nameOriginal": "Jing",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Dropbox","flare.DataManagement.GoogleDrive"],
+      "developer": "TechSmith",
+      "link": "https://www.techsmith.com/jing-tool.html"
+    },
+    {
+      "name": "flare.Visualizations.Lumion",
+      "nameOriginal": "Lumion",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.ModelDev.SketchUp","flare.AEC.Rhino","flare.ModelDev.3dsMax","flare.AEC.ArchiCAD","flare.AEC.Microstation"],
+      "developer": "Act-3D",
+      "link": "https://lumion.com/"
+    },
+    {
+      "name": "flare.MixedReality.Matterport",
+      "nameOriginal": "Matterport",
+      "size": 0,
+      "imports": [ "flare.AEC.ReCap","flare.AEC.Revit"],
+      "developer": "Matterport,Inc.",
+      "link": "https://matterport.com/3d-scanning-construction-engineering/"
+    },
+    {
+      "name": "flare.MixedReality.Meta2HMD",
+      "nameOriginal": "Meta2HMD",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.ProcessDev.VisualStudio","flare.ProcessDev.CSharp"],
+      "developer": "Meta",
+      "link": "http://www.metavision.com/"
+    },
+    {
+      "name": "flare.DataManagement.MySQL",
+      "nameOriginal": "MySQL",
+      "size": 0,
+      "imports": [ "flare.DataManagement.AmazonWebServices"],
+      "developer": "Oracle Corp.",
+      "link": "https://www.mysql.com/"
+    },
+    {
+      "name": "flare.DataManagement.Shotgun",
+      "nameOriginal": "Shotgun",
+      "size": 0,
+      "imports": [ "flare.Graphics.Photoshop","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.Graphics.AffinityDesigner"],
+      "developer": "Shotgun Software Inc.",
+      "link": "https://www.shotgunsoftware.com/integrations/"
+    },
+    {
+      "name": "flare.AEC.Navisworks",
+      "nameOriginal": "Navisworks",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.AutoCAD","flare.AEC.Microstation","flare.AEC.Revizto","flare.AEC.ArchiCAD","flare.AEC.ReCap"],
+      "developer": "Autodesk",
+      "link": "https://www.autodesk.com/products/navisworks/overview"
+    },
+    {
+      "name": "flare.AEC.ProjectCenter",
+      "nameOriginal": "ProjectCenter",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.Word","flare.OfficeTools.Excel","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.Communication.Outlook","flare.AEC.Revit","flare.AEC.Navisworks","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat"],
+      "developer": "Newforma",
+      "link": "https://www.newforma.com/"
+    },
+    {
+      "name": "flare.AEC.NewformaPlans",
+      "nameOriginal": "NewformaPlans",
+      "size": 0,
+      "imports": [ "flare.AEC.ProjectCenter","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu"],
+      "developer": "Newforma",
+      "link": "https://www.newforma.com/uncategorized-archive/the-newforma-plans-app-put-project-documents-at-your-fingertips/"
+    },
+    {
+      "name": "flare.ProcessDev.NodeJS",
+      "nameOriginal": "NodeJS",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.ProcessDev.CSS","flare.ProcessDev.ReactJS","flare.ProcessDev.Cordova","flare.ProcessDev.Dreamweaver"],
+      "developer": "Ryan Dahl",
+      "link": "https://nodejs.org/en/"
+    },
+    {
+      "name": "flare.AEC.OasysGSA",
+      "nameOriginal": "OasysGSA",
+      "size": 0,
+      "imports": [ "flare.AEC.Grasshopper","flare.AEC.Salamander","flare.AEC.Rhino","flare.AEC.Revit","flare.AEC.AutoCAD"],
+      "developer": "Oasys",
+      "link": "https://www.oasys-software.com/products/structural/gsa/"
+    },
+    {
+      "name": "flare.Communication.OBS Studio",
+      "nameOriginal": "OBS Studio",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.Python","flare.Communication.Twitch"],
+      "developer": "Open Broadcasting Software",
+      "link": "https://obsproject.com/"
+    },
+    {
+      "name": "flare.MixedReality.OculusRiftHMD",
+      "nameOriginal": "OculusRiftHMD",
+      "size": 0,
+      "imports": [ "flare.MixedReality.SteamVR","flare.MixedReality.Prospect","flare.MixedReality.Scope","flare.Visualizations.Enscape","flare.Visualizations.Twinmotion","flare.GameEngine.UnrealEngine","flare.GameEngine.Unity"],
+      "developer": "Facebook",
+      "link": "https://www.oculus.com/rift/#oui-csl-rift-games=robo-recall"
+    },
+    {
+      "name": "flare.ProcessDev.OpenGL",
+      "nameOriginal": "OpenGL",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.CSharp","flare.ProcessDev.CPlusPlus","flare.ProcessDev.Python"],
+      "developer": "Khronos Group",
+      "link": "https://www.opengl.org/about/"
+    },
+    {
+      "name": "flare.Communication.Outlook",
+      "nameOriginal": "Outlook",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.Word","flare.OfficeTools.Excel","flare.AEC.ProjectCenter","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat","flare.Graphics.Illustrator","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner"],
+      "developer": "Microsoft",
+      "link": "https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook?tab=tabs-1"
+    },
+    {
+      "name": "flare.AEC.Pachyderm",
+      "nameOriginal": "Pachyderm",
+      "size": 0,
+      "imports": [ "flare.AEC.Grasshopper"],
+      "developer": "Arthur van der Harten",
+      "link": "http://www.perspectivesketch.com/pachyderm/"
+    },
+    {
+      "name": "flare.ProcessDev.PhoneGap",
+      "nameOriginal": "PhoneGap",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.Cordova","flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.ProcessDev.CSS"],
+      "developer": "Adobe",
+      "link": "https://phonegap.com/"
+    },
+    {
+      "name": "flare.ProcessDev.PHP",
+      "nameOriginal": "PHP",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.ProcessDev.CSS"],
+      "developer": "Zend Technologies",
+      "link": "http://www.php.net/"
+    },
+    {
+      "name": "flare.AEC.PlanGrid",
+      "nameOriginal": "PlanGrid",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Box","flare.DataManagement.Dropbox","flare.DataManagement.GoogleDrive"],
+      "developer": "PlanGrid",
+      "link": "https://www.plangrid.com/integrations/"
+    },
+    {
+      "name": "flare.DataManagement.PostgreSQL",
+      "nameOriginal": "PostgreSQL",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Access","flare.DataManagement.MySQL","flare.ProcessDev.DataGrip","flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.ProcessDev.WordPress"],
+      "developer": "Postgre SQL Development Group",
+      "link": "https://www.postgresql.org/"
+    },
+    {
+      "name": "flare.DataManagement.PowerBI",
+      "nameOriginal": "PowerBI",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Access","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.OfficeTools.Excel","flare.Communication.Outlook","flare.ProcessDev.GitHub","flare.AEC.Revit","flare.ProcessDev.VisualStudio"],
+      "developer": "Microsoft",
+      "link": "https://powerbi.microsoft.com/en-us/"
+    },
+    {
+      "name": "flare.OfficeTools.PowerPoint",
+      "nameOriginal": "PowerPoint",
+      "size": 0,
+      "imports": [ "flare.Graphics.Illustrator","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.OfficeTools.Word","flare.OfficeTools.Excel"],
+      "developer": "Microsoft",
+      "link": "https://products.office.com/en-us/powerpoint"
+    },
+    {
+      "name": "flare.ProcessDev.PowerShell",
+      "nameOriginal": "PowerShell",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.GitHub","flare.Communication.Outlook"],
+      "developer": "Microsoft",
+      "link": "https://docs.microsoft.com/en-us/powershell/"
+    },
+    {
+      "name": "flare.ProcessDev.Processing",
+      "nameOriginal": "Processing",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.GitHub","flare.ProcessDev.Python"],
+      "developer": "Ben Fry & Casey Reas",
+      "link": "https://processing.org/"
+    },
+    {
+      "name": "flare.MixedReality.ProteusVR",
+      "nameOriginal": "ProteusVR",
+      "size": 0,
+      "imports": [ "flare.MixedReality.ViveHMD","flare.MixedReality.HoloLensHMD","flare.MixedReality.OculusRiftHMD","flare.GameEngine.UnrealEngine"],
+      "developer": "Proteus VR Inc.",
+      "link": "https://www.proteus-vr.com/"
+    },
+    {
+      "name": "flare.AEC.pyRevit",
+      "nameOriginal": "pyRevit",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.ProcessDev.Python","flare.ProcessDev.GitHub"],
+      "developer": "Ehsan Iran-Nejad",
+      "link": "https://eirannejad.github.io/pyRevit/"
+    },
+    {
+      "name": "flare.ProcessDev.Python",
+      "nameOriginal": "Python",
+      "size": 0,
+      "imports": [ "flare.AEC.Grasshopper","flare.AEC.Revit","flare.AEC.Dynamo","flare.AEC.pyRevit"],
+      "developer": "Guido van Rossum",
+      "link": "https://www.python.org/"
+    },
+    {
+      "name": "flare.DataManagement.Rainmeter",
+      "nameOriginal": "Rainmeter",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.CPlusPlus"],
+      "developer": "Open Source",
+      "link": "https://www.rainmeter.net/"
+    },
+    {
+      "name": "flare.ProcessDev.ReactJS",
+      "nameOriginal": "ReactJS",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.D3","flare.ProcessDev.NodeJS","flare.ProcessDev.HTML","flare.ProcessDev.CSS"],
+      "developer": "Facebook Open Source",
+      "link": "https://reactjs.org/"
+    },
+    {
+      "name": "flare.Communication.Realtime Board",
+      "nameOriginal": "Realtime Board",
+      "size": 0,
+      "imports": [ "flare.DataManagement.GoogleDrive","flare.DataManagement.Box","flare.DataManagement.Jira","flare.DataManagement.Dropbox","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.OfficeTools.Word","flare.OfficeTools.PowerPoint","flare.OfficeTools.Excel"],
+      "developer": "Realtimeboard Inc.",
+      "link": "https://realtimeboard.com/features/"
+    },
+    {
+      "name": "flare.AEC.ReCap",
+      "nameOriginal": "ReCap",
+      "size": 0,
+      "imports": [ "flare.AEC.AutoCAD","flare.AEC.Revit","flare.AEC.Navisworks","flare.AEC.ArchiCAD"],
+      "developer": "Autodesk",
+      "link": "https://www.autodesk.com/products/recap/overview"
+    },
+    {
+      "name": "flare.AEC.Revit",
+      "nameOriginal": "Revit",
+      "size": 0,
+      "imports": [ "flare.Visualizations.Enscape","flare.AEC.AutoCAD","flare.ModelDev.3dsMax","flare.DataManagement.Access","flare.OfficeTools.Excel","flare.AEC.Microstation","flare.AEC.Navisworks","flare.AEC.Rhino","flare.ModelDev.SketchUp","flare.ModelDev.Maya","flare.MixedReality.HoloLive","flare.AEC.RTVTools"],
+      "developer": "Autodesk",
+      "link": "https://www.autodesk.com/products/revit/overview"
+    },
+    {
+      "name": "flare.AEC.Revizto",
+      "nameOriginal": "Revizto",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.Navisworks","flare.AEC.AutoCAD","flare.AEC.Civil3D","flare.ModelDev.SketchUp","flare.AEC.ArchiCAD","flare.AEC.Rhino","flare.ModelDev.3dsMax","flare.ModelDev.Maya","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.Communication.Outlook"],
+      "developer": "Vizerra",
+      "link": "https://revizto.com/en/"
+    },
+    {
+      "name": "flare.AEC.Rhino",
+      "nameOriginal": "Rhino",
+      "size": 0,
+      "imports": [ "flare.AEC.Grasshopper","flare.ModelDev.3dsMax","flare.GameEngine.Unity","flare.AEC.Revit","flare.ModelDev.Maya","flare.Visualizations.KeyShot","flare.AEC.AutoCAD","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.AEC.Microstation","flare.ModelDev.SketchUp"],
+      "developer": "McNeel",
+      "link": "https://www.rhino3d.com/formats"
+    },
+    {
+      "name": "flare.OfficeTools.RoboCopy",
+      "nameOriginal": "RoboCopy",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.VisualBasic","flare.ProcessDev.VisualStudio"],
+      "developer": "Microsoft",
+      "link": "https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy"
+    },
+    {
+      "name": "flare.AEC.RTVTools",
+      "nameOriginal": "RTVTools",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat","flare.AEC.AutoCAD","flare.AEC.Navisworks","flare.AEC.Solibri","flare.OfficeTools.Excel"],
+      "developer": "RTV Tools Limited",
+      "link": "https://www.rtvtools.com/"
+    },
+    {
+      "name": "flare.AEC.Salamander",
+      "nameOriginal": "Salamander",
+      "size": 0,
+      "imports": [ "flare.AEC.Grasshopper","flare.AEC.ETABS","flare.AEC.Rhino","flare.AEC.OasysGSA"],
+      "developer": "Paul Jeffries",
+      "link": "http://www.food4rhino.com/app/salamander-3"
+    },
+    {
+      "name": "flare.Graphics.Scribus",
+      "nameOriginal": "Scribus",
+      "size": 0,
+      "imports": [ "flare.Graphics.Photoshop","flare.Graphics.Illustrator","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat"],
+      "developer": "Scribus",
+      "link": "https://www.scribus.net/"
+    },
+    {
+      "name": "flare.GameEngine.Simplygon",
+      "nameOriginal": "Simplygon",
+      "size": 0,
+      "imports": [ "flare.GameEngine.UnrealEngine","flare.ModelDev.Maya","flare.AEC.Revit","flare.ModelDev.3dsMax","flare.GameEngine.Unity"],
+      "developer": "Microsoft",
+      "link": "https://account.simplygon.com/"
+    },
+    {
+      "name": "flare.ModelDev.SketchUp",
+      "nameOriginal": "SketchUp",
+      "size": 0,
+      "imports": [ "flare.Visualizations.MarmosetToolbag","flare.Visualizations.KeyShot","flare.Visualizations.Redshift","flare.AEC.Revit","flare.ModelDev.Maya","flare.AEC.AutoCAD","flare.ModelDev.3dsMax","flare.AEC.TrimbleConnect"],
+      "developer": "Trimble",
+      "link": "https://www.sketchup.com/products/sketchup-pro"
+    },
+    {
+      "name": "flare.Communication.Skype",
+      "nameOriginal": "Skype",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.Excel","flare.OfficeTools.Word","flare.OfficeTools.PowerPoint","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu"],
+      "developer": "Microsoft",
+      "link": "https://www.skype.com/en/"
+    },
+    {
+      "name": "flare.AEC.Solibri",
+      "nameOriginal": "Solibri",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.ArchiCAD","flare.AEC.Navisworks","flare.AEC.AutoCAD","flare.AEC.Microstation","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.OfficeTools.Excel"],
+      "developer": "Nemetschek",
+      "link": "https://www.solibri.com/products/solibri-model-checker/"
+    },
+    {
+      "name": "flare.ProcessDev.SourceTree",
+      "nameOriginal": "SourceTree",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.GitHub","flare.ProcessDev.BitBucket","flare.DataManagement.Jira"],
+      "developer": "Atlassian",
+      "link": "https://www.atlassian.com/software/sourcetree"
+    },
+    {
+      "name": "flare.MixedReality.SteamVR",
+      "nameOriginal": "SteamVR",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.ProcessDev.VisualStudio","flare.MixedReality.ViveHMD"],
+      "developer": "Steam",
+      "link": "https://steamcommunity.com/steamvr"
+    },
+    {
+      "name": "flare.MaterialDev.SubstanceDesigner",
+      "nameOriginal": "SubstanceDesigner",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.GameEngine.CryEngine","flare.GameEngine.Lumberyard","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.ModelDev.Modo","flare.ModelDev.Cinema4D","flare.ModelDev.Houdini","flare.AEC.CATIA","flare.Visualizations.MarmosetToolbag","flare.Visualizations.VRay","flare.MaterialDev.SubstancePlayer","flare.MaterialDev.SubstancePainter","flare.MaterialDev.SubstanceB2M"],
+      "developer": "Allegorithmic",
+      "link": "https://www.allegorithmic.com/products/substance-designer"
+    },
+    {
+      "name": "flare.Visualizations.Swarm",
+      "nameOriginal": "Swarm",
+      "size": 0,
+      "imports": [ "flare.Visualizations.VRay"],
+      "developer": "Chaos Group",
+      "link": "https://www.chaosgroup.com/blog/understanding-v-ray-swarm"
+    },
+    {
+      "name": "flare.Communication.Sway",
+      "nameOriginal": "Sway",
+      "size": 0,
+      "imports": [ "flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner"],
+      "developer": "Microsoft",
+      "link": "https://sway.com/"
+    },
+    {
+      "name": "flare.ProcessDev.Swift",
+      "nameOriginal": "Swift",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.XCode"],
+      "developer": "Apple",
+      "link": "https://developer.apple.com/swift/"
+    },
+    {
+      "name": "flare.AEC.Tally",
+      "nameOriginal": "Tally",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.OfficeTools.Excel","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat"],
+      "developer": "KT Innovations",
+      "link": "http://choosetally.com/"
+    },
+    {
+      "name": "flare.Communication.Teams",
+      "nameOriginal": "Teams",
+      "size": 0,
+      "imports": [ "flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.Graphics.Illustrator","flare.Graphics.InDesign","flare.ProcessDev.BitBucket","flare.ProcessDev.GitHub","flare.DataManagement.PowerBI","flare.Communication.Stream","flare.Communication.Trello"],
+      "developer": "Microsoft",
+      "link": "https://products.office.com/en-us/microsoft-teams/apps"
+    },
+    {
+      "name": "flare.MixedReality.ThingWorxStudio",
+      "nameOriginal": "ThingWorxStudio",
+      "size": 0,
+      "imports": [ "flare.MixedReality.HoloLensHMD","flare.ModelDev.Maya","flare.AEC.Revit","flare.ModelDev.3dsMax"],
+      "developer": "PTC",
+      "link": "https://www.ptc.com/en/products/augmented-reality/thingworx-studio"
+    },
+    {
+      "name": "flare.MixedReality.TPCast",
+      "nameOriginal": "TPCast",
+      "size": 0,
+      "imports": [ "flare.MixedReality.ViveHMD","flare.MixedReality.OculusRiftHMD"],
+      "developer": "TPCast",
+      "link": "https://www.tpcastvr.com/product"
+    },
+    {
+      "name": "flare.AEC.TrimbleConnect",
+      "nameOriginal": "TrimbleConnect",
+      "size": 0,
+      "imports": [ "flare.AEC.ProjectSight","flare.AEC.Revit","flare.AEC.Navisworks","flare.AEC.Microstation","flare.AEC.Rhino","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.AEC.Tekla","flare.ModelDev.SketchUp","flare.Communication.Outlook"],
+      "developer": "Trimble",
+      "link": "https://connect.trimble.com/"
+    },
+    {
+      "name": "flare.AEC.ProjectSight",
+      "nameOriginal": "ProjectSight",
+      "size": 0,
+      "imports": [ "flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu","flare.Communication.Outlook"],
+      "developer": "Trimble",
+      "link": "https://projectsight.trimble.com/"
+    },
+    {
+      "name": "flare.Visualizations.Twinmotion",
+      "nameOriginal": "Twinmotion",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.Rhino","flare.ModelDev.SketchUp","flare.AEC.ArchiCAD","flare.AEC.Microstation","flare.ModelDev.Modo","flare.ModelDev.Maya","flare.AEC.AutoCAD","flare.ModelDev.3dsMax","flare.AEC.CATIA","flare.ModelDev.Cinema4D"],
+      "developer": "Abvent",
+      "link": "https://twinmotion.abvent.com/en/"
+    },
+    {
+      "name": "flare.GameEngine.Umbra",
+      "nameOriginal": "Umbra",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.AEC.Revit","flare.AEC.Navisworks","flare.AEC.ArchiCAD","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.AEC.CityEngine"],
+      "developer": "Umbra",
+      "link": "https://umbra3d.com/"
+    },
+    {
+      "name": "flare.AEC.UNIFI",
+      "nameOriginal": "UNIFI",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.OfficeTools.Word","flare.OfficeTools.Excel","flare.AEC.AutoCAD","flare.AEC.Civil3D","flare.AEC.Microstation","flare.ModelDev.3dsMax","flare.ModelDev.SketchUp","flare.AEC.ArchiCAD","flare.AEC.Dynamo","flare.AEC.Rhino","flare.AEC.Grasshopper"],
+      "developer": "UNIFI Labs,Inc.",
+      "link": "http://unifilabs.com/content-management/"
+    },
+    {
+      "name": "flare.GameEngine.Unity",
+      "nameOriginal": "Unity",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.Rhino","flare.ModelDev.SketchUp","flare.MaterialDev.SubstanceDesigner","flare.Graphics.Photoshop","flare.Graphics.AffinityDesigner","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.ModelDev.Houdini","flare.ProcessDev.HTML","flare.ProcessDev.JavaScript","flare.ProcessDev.CSharp","flare.MixedReality.HoloLensHMD","flare.MixedReality.ViveHMD","flare.MixedReality.ViveTracker","flare.MixedReality.OculusRiftHMD","flare.MixedReality.Meta2HMD","flare.ProcessDev.VisualStudio"],
+      "developer": "Unity Technologies",
+      "link": "https://unity3d.com/"
+    },
+    {
+      "name": "flare.GameEngine.UnityCloudBuild",
+      "nameOriginal": "UnityCloudBuild",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.ProcessDev.GitHub","flare.ProcessDev.BitBucket"],
+      "developer": "Unity Technologies",
+      "link": "https://unity3d.com/unity/features/cloud-build"
+    },
+    {
+      "name": "flare.GameEngine.UnrealEngine",
+      "nameOriginal": "UnrealEngine",
+      "size": 0,
+      "imports": [ "flare.ModelDev.3dsMax","flare.ModelDev.Maya","flare.AEC.CityEngine","flare.ProcessDev.HTML","flare.ProcessDev.CPlusPlus","flare.MixedReality.OculusRiftHMD","flare.MixedReality.ViveHMD"],
+      "developer": "Epic Games",
+      "link": "https://www.unrealengine.com/en-US/what-is-unreal-engine-4"
+    },
+    {
+      "name": "flare.GameEngine.UrhoSharp",
+      "nameOriginal": "UrhoSharp",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.VisualStudio","flare.ProcessDev.FSharp","flare.ProcessDev.GitHub"],
+      "developer": "Microsoft",
+      "link": "https://docs.microsoft.com/en-us/xamarin/graphics-games/urhosharp/"
+    },
+    {
+      "name": "flare.Visualizations.VRay",
+      "nameOriginal": "VRay",
+      "size": 0,
+      "imports": [ "flare.Visualizations.Swarm","flare.AEC.Revit","flare.ModelDev.SketchUp","flare.AEC.Rhino","flare.ModelDev.3dsMax","flare.ModelDev.Blender","flare.ModelDev.Maya","flare.GameEngine.UnrealEngine","flare.ModelDev.Modo"],
+      "developer": "Chaos Group",
+      "link": "https://www.chaosgroup.com/"
+    },
+    {
+      "name": "flare.ProcessDev.VisualBasic",
+      "nameOriginal": "VisualBasic",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.VisualStudio","flare.OfficeTools.RoboCopy","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL"],
+      "developer": "Microsoft",
+      "link": "https://docs.microsoft.com/en-us/dotnet/visual-basic/"
+    },
+    {
+      "name": "flare.ProcessDev.VisualStudio",
+      "nameOriginal": "VisualStudio",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.GitHub","flare.ProcessDev.AndroidStudio","flare.ProcessDev.BitBucket","flare.Communication.Teams","flare.ProcessDev.CSharp","flare.ProcessDev.CPlusPlus","flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.ProcessDev.Python","flare.ProcessDev.FSharp","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.ProcessDev.PHP","flare.ProcessDev.Swift"],
+      "developer": "Microsoft",
+      "link": "https://www.visualstudio.com/"
+    },
+    {
+      "name": "flare.MixedReality.ViveTracker",
+      "nameOriginal": "ViveTracker",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.MixedReality.ViveHMD"],
+      "developer": "HTC",
+      "link": "https://www.vive.com/us/vive-tracker/"
+    },
+    {
+      "name": "flare.MixedReality.Vuforia",
+      "nameOriginal": "Vuforia",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.ProcessDev.XCode","flare.ProcessDev.AndroidStudio","flare.ProcessDev.VisualStudio","flare.ProcessDev.CPlusPlus","flare.ProcessDev.CSharp"],
+      "developer": "PTC",
+      "link": "https://www.vuforia.com/tools-and-resources.html"
+    },
+    {
+      "name": "flare.Communication.WebEx",
+      "nameOriginal": "WebEx",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Jira","flare.DataManagement.OneDrive","flare.DataManagement.GoogleDrive","flare.DataManagement.Box","flare.Communication.Trello"],
+      "developer": "Cisco",
+      "link": "https://www.webex.com/products/teams/index.html#home-to-teams"
+    },
+    {
+      "name": "flare.OfficeTools.Word",
+      "nameOriginal": "Word",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.Excel","flare.OfficeTools.PowerPoint","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto"],
+      "developer": "Microsoft",
+      "link": "https://products.office.com/en-us/word"
+    },
+    {
+      "name": "flare.ProcessDev.WordPress",
+      "nameOriginal": "WordPress",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.PHP","flare.ProcessDev.HTML","flare.ProcessDev.CSS","flare.Graphics.Photoshop","flare.DataManagement.Zapier","flare.DataManagement.GoogleDrive","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner"],
+      "developer": "Automattic",
+      "link": "https://wordpress.com/"
+    },
+    {
+      "name": "flare.ProcessDev.XCode",
+      "nameOriginal": "XCode",
+      "size": 0,
+      "imports": [ "flare.GameEngine.UnityCloudBuild","flare.GameEngine.Unity","flare.ProcessDev.Swift","flare.ProcessDev.GitHub"],
+      "developer": "Apple",
+      "link": "https://developer.apple.com/xcode/"
+    },
+    {
+      "name": "flare.ProcessDev.XFDesigner",
+      "nameOriginal": "XFDesigner",
+      "size": 0,
+      "imports": [ "flare.DataManagement.dRofus"],
+      "developer": "Ecrion,Inc.",
+      "link": "https://www.ecrion.com/xfdesigner/"
+    },
+    {
+      "name": "flare.OfficeTools.Zoho",
+      "nameOriginal": "Zoho",
+      "size": 0,
+      "imports": [ "flare.DataManagement.GoogleDrive"],
+      "developer": "Zoho Corp. Ltd.",
+      "link": "https://www.zoho.com/"
+    },
+    {
+      "name": "flare.Visualizations.Maxwell",
+      "nameOriginal": "Maxwell",
+      "size": 0,
+      "imports": [ "flare.ModelDev.3dsMax","flare.ModelDev.SketchUp","flare.AEC.Rhino","flare.ModelDev.Maya","flare.AEC.ArchiCAD","flare.AEC.Revit"],
+      "developer": "Next Limit",
+      "link": "http://www.nextlimit.com/maxwell/"
+    },
+    {
+      "name": "flare.ModelDev.Maya",
+      "nameOriginal": "Maya",
+      "size": 0,
+      "imports": [ "flare.Visualizations.MarmosetToolbag","flare.Visualizations.KeyShot","flare.Visualizations.Redshift","flare.ModelDev.3dsMax","flare.MaterialDev.SubstanceDesigner","flare.ModelDev.Mudbox"],
+      "developer": "Autodesk",
+      "link": "https://www.autodesk.com/products/maya/features"
+    },
+    {
+      "name": "flare.Graphics.Sketchbook",
+      "nameOriginal": "Sketchbook",
+      "size": 0,
+      "imports": [ "flare.Graphics.Photoshop","flare.Graphics.Illustrator","flare.Graphics.InDesign","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.OfficeTools.Word"],
+      "developer": "Autodesk",
+      "link": "https://sketchbook.com/"
+    },
+    {
+      "name": "flare.Communication.Stream",
+      "nameOriginal": "Stream",
+      "size": 0,
+      "imports": [ "flare.Communication.Teams"],
+      "developer": "Microsoft",
+      "link": "https://stream.microsoft.com/en-us/"
+    },
+    {
+      "name": "flare.MaterialDev.SubstancePlayer",
+      "nameOriginal": "SubstancePlayer",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.GameEngine.CryEngine","flare.GameEngine.Lumberyard","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.ModelDev.Modo","flare.ModelDev.Cinema4D","flare.ModelDev.Houdini","flare.AEC.CATIA","flare.Visualizations.MarmosetToolbag","flare.Visualizations.VRay","flare.MaterialDev.SubstanceDesigner"],
+      "developer": "Allegorithmic",
+      "link": "https://www.allegorithmic.com/products/substance-player"
+    },
+    {
+      "name": "flare.DataManagement.3D Repo",
+      "nameOriginal": "3D Repo",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.Navisworks","flare.AEC.ArchiCAD","flare.ProcessDev.GitHub","flare.ModelDev.Maya"],
+      "developer": "3D Repo Ltd.",
+      "link": "http://3drepo.org/"
+    },
+    {
+      "name": "flare.AEC.Procore",
+      "nameOriginal": "Procore",
+      "size": 0,
+      "imports": [ "flare.AEC.ProjectSight","flare.DataManagement.Box","flare.DataManagement.PowerBI","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.DataManagement.Tableau"],
+      "developer": "Procore Technologies",
+      "link": "https://marketplace.procore.com/"
+    },
+    {
+      "name": "flare.GameEngine.Datasmith",
+      "nameOriginal": "Datasmith",
+      "size": 0,
+      "imports": [ "flare.ModelDev.3dsMax","flare.GameEngine.UnrealEngine"],
+      "developer": "Epic Games",
+      "link": "https://www.unrealengine.com/en-US/blog/introducing-datasmith-a-workflow-toolkit-for-unreal-engine"
+    },
+    {
+      "name": "flare.AEC.Microstation",
+      "nameOriginal": "Microstation",
+      "size": 0,
+      "imports": [ "flare.AEC.AutoCAD","flare.AEC.Revit","flare.AEC.Solibri","flare.AEC.Navisworks","flare.AEC.ArchiCAD","flare.DataManagement.Access","flare.OfficeTools.Excel"],
+      "developer": "Bentley",
+      "link": "https://www.bentley.com/en/products/brands/microstation"
+    },
+    {
+      "name": "flare.AEC.Civil3D",
+      "nameOriginal": "Civil3D",
+      "size": 0,
+      "imports": [ "flare.AEC.AutoCAD","flare.AEC.Revit","flare.AEC.ReCap","flare.AEC.ArcGIS","flare.AEC.Navisworks","flare.AEC.Solibri","flare.ModelDev.3dsMax","flare.AEC.ArchiCAD"],
+      "developer": "Autodesk",
+      "link": "https://www.autodesk.com/products/civil-3d/features"
+    },
+    {
+      "name": "flare.AEC.OpeningsStudio",
+      "nameOriginal": "OpeningsStudio",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.OfficeTools.Excel","flare.Graphics.Acrobat","flare.Graphics.BluebeamRevu"],
+      "developer": "ASSA Abloy",
+      "link": "https://www.assaabloydss.com/en/local/dss/services/openings-studio/"
+    },
+    {
+      "name": "flare.ProcessDev.IntelliJ",
+      "nameOriginal": "IntelliJ",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.ProcessDev.GitHub","flare.ProcessDev.AndroidStudio","flare.ProcessDev.PhoneGap","flare.ProcessDev.Cordova"],
+      "developer": "JetBrains",
+      "link": "https://www.jetbrains.com/idea/"
+    },
+    {
+      "name": "flare.ProcessDev.PhpStorm",
+      "nameOriginal": "PhpStorm",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.PHP","flare.ProcessDev.HTML","flare.ProcessDev.JavaScript","flare.ProcessDev.CSS","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.ProcessDev.GitHub","flare.ProcessDev.WordPress"],
+      "developer": "JetBrains",
+      "link": "https://www.jetbrains.com/phpstorm/"
+    },
+    {
+      "name": "flare.ProcessDev.CLion",
+      "nameOriginal": "CLion",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.CSharp","flare.ProcessDev.CPlusPlus","flare.ProcessDev.CMake"],
+      "developer": "JetBrains",
+      "link": "https://www.jetbrains.com/clion/"
+    },
+    {
+      "name": "flare.ProcessDev.DataGrip",
+      "nameOriginal": "DataGrip",
+      "size": 0,
+      "imports": [ "flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL"],
+      "developer": "JetBrains",
+      "link": "https://www.jetbrains.com/datagrip/"
+    },
+    {
+      "name": "flare.MaterialDev.SubstancePainter",
+      "nameOriginal": "SubstancePainter",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.GameEngine.CryEngine","flare.GameEngine.Lumberyard","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.ModelDev.Modo","flare.ModelDev.Cinema4D","flare.ModelDev.Houdini","flare.AEC.CATIA","flare.Visualizations.MarmosetToolbag","flare.Visualizations.VRay","flare.MaterialDev.SubstanceDesigner"],
+      "developer": "Allegorithmic",
+      "link": "https://www.allegorithmic.com/products/substance-painter"
+    },
+    {
+      "name": "flare.MaterialDev.MaterialZ",
+      "nameOriginal": "MaterialZ",
+      "size": 0,
+      "imports": [ "flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.ModelDev.Zbrush","flare.ModelDev.Houdini","flare.ModelDev.Modo","flare.ModelDev.Blender","flare.Graphics.Photoshop","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.Graphics.AffinityPhoto"],
+      "developer": "Brain District",
+      "link": "https://www.braindistrict.com/products/material-z-subscription"
+    },
+    {
+      "name": "flare.MaterialDev.Megascans",
+      "nameOriginal": "Megascans",
+      "size": 0,
+      "imports": [ "flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.Visualizations.VRay","flare.ModelDev.Blender","flare.GameEngine.UnrealEngine","flare.GameEngine.Unity","flare.ModelDev.Cinema4D","flare.ModelDev.Modo","flare.ModelDev.Mudbox","flare.Visualizations.Redshift"],
+      "developer": "Quixel",
+      "link": "https://megascans.se/"
+    },
+    {
+      "name": "flare.Visualizations.Redshift",
+      "nameOriginal": "Redshift",
+      "size": 0,
+      "imports": [ "flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.ModelDev.Houdini","flare.Visualizations.Katana","flare.ModelDev.Cinema4D"],
+      "developer": "Redshift",
+      "link": "https://www.redshift3d.com/product"
+    },
+    {
+      "name": "flare.Visualizations.MarmosetToolbag",
+      "nameOriginal": "MarmosetToolbag",
+      "size": 0,
+      "imports": [ "flare.ModelDev.Maya","flare.ProcessDev.Python","flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.ModelDev.3dsMax","flare.AEC.Revit","flare.ModelDev.Modo","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.Graphics.Illustrator","flare.ModelDev.Zbrush"],
+      "developer": "Marmoset LLC",
+      "link": "https://www.marmoset.co/toolbag/"
+    },
+    {
+      "name": "flare.Visualizations.KeyShot",
+      "nameOriginal": "KeyShot",
+      "size": 0,
+      "imports": [ "flare.ModelDev.Maya","flare.ProcessDev.Python","flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.ModelDev.3dsMax","flare.AEC.Revit","flare.ModelDev.Modo","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.Graphics.Illustrator","flare.ModelDev.Zbrush"],
+      "developer": "KeyShot",
+      "link": "https://www.keyshot.com/features/"
+    },
+    {
+      "name": "flare.Graphics.Hexels",
+      "nameOriginal": "Hexels",
+      "size": 0,
+      "imports": [ "flare.Graphics.Photoshop","flare.Graphics.Illustrator","flare.Graphics.InDesign","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.OfficeTools.Excel","flare.GameEngine.Unity","flare.ProcessDev.JavaScript"],
+      "developer": "Marmoset",
+      "link": "https://www.marmoset.co/hexels/"
+    },
+    {
+      "name": "flare.ModelDev.Modo",
+      "nameOriginal": "Modo",
+      "size": 0,
+      "imports": [ "flare.Visualizations.MarmosetToolbag","flare.Visualizations.KeyShot","flare.Visualizations.Redshift","flare.GameEngine.UnrealEngine","flare.GameEngine.Unity","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.AEC.Revit","flare.Visualizations.VRay","flare.Visualizations.Katana"],
+      "developer": "Foundry",
+      "link": "https://www.foundry.com/products/modo/features"
+    },
+    {
+      "name": "flare.ModelDev.Houdini",
+      "nameOriginal": "Houdini",
+      "size": 0,
+      "imports": [ "flare.Visualizations.MarmosetToolbag","flare.Visualizations.KeyShot","flare.Visualizations.Redshift","flare.GameEngine.UnrealEngine","flare.GameEngine.Unity","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.AEC.Revit"],
+      "developer": "SideFX",
+      "link": "https://www.sidefx.com/products/whats-new-165/"
+    },
+    {
+      "name": "flare.DataManagement.Dropbox",
+      "nameOriginal": "Dropbox",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.Zoho","flare.DataManagement.GoogleDrive","flare.DataManagement.OneDrive","flare.DataManagement.Zapier"],
+      "developer": "Dropbox",
+      "link": "https://www.dropbox.com/?landing=dbv2"
+    },
+    {
+      "name": "flare.DataManagement.OneDrive",
+      "nameOriginal": "OneDrive",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Dropbox","flare.DataManagement.GoogleDrive","flare.DataManagement.Zapier"],
+      "developer": "Microsoft",
+      "link": "https://onedrive.live.com/about/en-us/"
+    },
+    {
+      "name": "flare.DataManagement.AmazonWebServices",
+      "nameOriginal": "AmazonWebServices",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Lumberyard","flare.ProcessDev.HTML","flare.ProcessDev.CSS","flare.ProcessDev.JavaScript","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL"],
+      "developer": "Amazon",
+      "link": "https://aws.amazon.com/"
+    },
+    {
+      "name": "flare.DataManagement.Tableau",
+      "nameOriginal": "Tableau",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Box","flare.DataManagement.Dropbox","flare.AEC.ArcGIS","flare.ProcessDev.JavaScript","flare.DataManagement.GoogleDrive","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.DataManagement.Access","flare.OfficeTools.Excel","flare.DataManagement.OneDrive","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat","flare.AEC.Revit"],
+      "developer": "Tableau Software",
+      "link": "https://www.tableau.com/products/desktop#data-sources"
+    },
+    {
+      "name": "flare.AEC.ArcGIS",
+      "nameOriginal": "ArcGIS",
+      "size": 0,
+      "imports": [ "flare.DataManagement.PowerBI","flare.OfficeTools.Excel","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat","flare.AEC.CityEngine","flare.Graphics.Illustrator","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.ProcessDev.HTML","flare.ProcessDev.JavaScript"],
+      "developer": "Esri",
+      "link": "https://www.arcgis.com/features/apps/index.html"
+    },
+    {
+      "name": "flare.ModelDev.Zbrush",
+      "nameOriginal": "Zbrush",
+      "size": 0,
+      "imports": [ "flare.Visualizations.MarmosetToolbag","flare.Visualizations.KeyShot","flare.Visualizations.Redshift","flare.GameEngine.UnrealEngine","flare.GameEngine.Unity","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.AEC.Revit"],
+      "developer": "Pixologic",
+      "link": "http://pixologic.com/zbrush/features/overview/"
+    },
+    {
+      "name": "flare.MaterialDev.SubstanceB2M",
+      "nameOriginal": "SubstanceB2M",
+      "size": 0,
+      "imports": [ "flare.GameEngine.UnrealEngine","flare.GameEngine.Unity","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.MaterialDev.SubstanceDesigner"],
+      "developer": "Allegorithmic",
+      "link": "https://www.allegorithmic.com/products/bitmap2material"
+    },
+    {
+      "name": "flare.Graphics.Photoshop",
+      "nameOriginal": "Photoshop",
+      "size": 0,
+      "imports": [ "flare.Graphics.Illustrator","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat","flare.Graphics.InDesign","flare.Graphics.AffinityDesigner","flare.Graphics.AffinityPhoto"],
+      "developer": "Adobe",
+      "link": "https://www.adobe.com/products/photoshop.html"
+    },
+    {
+      "name": "flare.GameEngine.PlayCanvas",
+      "nameOriginal": "PlayCanvas",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.ModelDev.Maya","flare.AEC.Revit","flare.ModelDev.SketchUp","flare.ModelDev.Houdini","flare.ModelDev.3dsMax","flare.Graphics.Photoshop","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.Graphics.AffinityPhoto","flare.ProcessDev.GitHub"],
+      "developer": "PlayCanvas Ltd.",
+      "link": "https://playcanvas.com/"
+    },
+    {
+      "name": "flare.DataManagement.Box",
+      "nameOriginal": "Box",
+      "size": 0,
+      "imports": [ "flare.DataManagement.GoogleDrive","flare.DataManagement.AmazonWebServices","flare.OfficeTools.Excel","flare.Communication.Outlook"],
+      "developer": "Box,Inc.",
+      "link": "https://cloud.app.box.com/apps"
+    },
+    {
+      "name": "flare.DataManagement.Access",
+      "nameOriginal": "Access",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Tableau","flare.DataManagement.PowerBI","flare.OfficeTools.Excel","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.Graphics.BluebeamRevu","flare.Graphics.Acrobat"],
+      "developer": "Microsoft",
+      "link": "https://products.office.com/en-us/access"
+    },
+    {
+      "name": "flare.Communication.Trello",
+      "nameOriginal": "Trello",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.BitBucket","flare.DataManagement.Dropbox","flare.DataManagement.Evernote","flare.ProcessDev.GitHub","flare.DataManagement.GoogleDrive","flare.DataManagement.Jira","flare.Graphics.InVision","flare.DataManagement.OneDrive","flare.Communication.Realtime Board","flare.DataManagement.Zapier"],
+      "developer": "Atlassian",
+      "link": "https://trello.com/power-ups"
+    },
+    {
+      "name": "flare.DataManagement.Jira",
+      "nameOriginal": "Jira",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.BitBucket","flare.ProcessDev.SourceTree"],
+      "developer": "Atlassian",
+      "link": "https://www.atlassian.com/software/jira"
+    },
+    {
+      "name": "flare.MixedReality.LeapMotionHMD",
+      "nameOriginal": "LeapMotionHMD",
+      "size": 0,
+      "imports": [ "flare.MixedReality.GravitySketch","flare.MixedReality.ViveHMD","flare.MixedReality.OculusRiftHMD","flare.GameEngine.Unity","flare.GameEngine.UnrealEngine"],
+      "developer": "Leap Motion,Inc.",
+      "link": "https://www.leapmotion.com/product/vr#110"
+    },
+    {
+      "name": "flare.MixedReality.Scope",
+      "nameOriginal": "Scope",
+      "size": 0,
+      "imports": [ "flare.Visualizations.VRay","flare.Visualizations.Lumion","flare.AEC.Revit"],
+      "developer": "IrisVR",
+      "link": "https://irisvr.com/scope"
+    },
+    {
+      "name": "flare.Communication.Camtasia",
+      "nameOriginal": "Camtasia",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.PowerPoint","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.InDesign","flare.OfficeTools.Word","flare.OfficeTools.Excel","flare.DataManagement.GoogleDrive","flare.DataManagement.Dropbox"],
+      "developer": "TechSmith",
+      "link": "https://www.techsmith.com/video-editor.html"
+    },
+    {
+      "name": "flare.Communication.Snagit",
+      "nameOriginal": "Snagit",
+      "size": 0,
+      "imports": [ "flare.OfficeTools.PowerPoint","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.InDesign","flare.Communication.Camtasia","flare.OfficeTools.Word","flare.OfficeTools.Excel","flare.DataManagement.GoogleDrive","flare.DataManagement.Dropbox"],
+      "developer": "TechSmith",
+      "link": "https://www.techsmith.com/screen-capture.html"
+    },
+    {
+      "name": "flare.AEC.SAP2000",
+      "nameOriginal": "SAP2000",
+      "size": 0,
+      "imports": [ "flare.AEC.OasysGSA","flare.AEC.Revit"],
+      "developer": "CSI",
+      "link": "https://www.csiamerica.com/products/sap2000"
+    },
+    {
+      "name": "flare.AEC.Tekla",
+      "nameOriginal": "Tekla",
+      "size": 0,
+      "imports": [ "flare.AEC.SAP2000","flare.AEC.Revit"],
+      "developer": "Trimble",
+      "link": "https://www.tekla.com/us/products/tekla-structures"
+    },
+    {
+      "name": "flare.AEC.ETABS",
+      "nameOriginal": "ETABS",
+      "size": 0,
+      "imports": [ "flare.AEC.Revit","flare.AEC.Tekla","flare.AEC.AutoCAD","flare.DataManagement.Access","flare.AEC.Navisworks","flare.AEC.Solibri"],
+      "developer": "CSI",
+      "link": "https://www.csiamerica.com/products/etabs/features#import-and-export"
+    },
+    {
+      "name": "flare.Communication.Twitch",
+      "nameOriginal": "Twitch",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.JavaScript","flare.ProcessDev.HTML","flare.DataManagement.AmazonWebServices"],
+      "developer": "Twitch Interactive,Inc.",
+      "link": "https://www.twitch.tv/"
+    },
+    {
+      "name": "flare.AEC.CityEngine",
+      "nameOriginal": "CityEngine",
+      "size": 0,
+      "imports": [ "flare.GameEngine.UnrealEngine","flare.AEC.ArcGIS","flare.ProcessDev.Python","flare.ModelDev.3dsMax","flare.GameEngine.Unity","flare.ModelDev.Maya","flare.AEC.Revit","flare.AEC.AutoCAD"],
+      "developer": "Esri",
+      "link": "http://www.esri.com/software/cityengine/features"
+    },
+    {
+      "name": "flare.ProcessDev.FSharp",
+      "nameOriginal": "FSharp",
+      "size": 0,
+      "imports": [ "flare.GameEngine.UrhoSharp","flare.ProcessDev.VisualStudio","flare.ProcessDev.JavaScript","flare.ProcessDev.HTML"],
+      "developer": "Microsoft",
+      "link": "https://fsharp.org/"
+    },
+    {
+      "name": "flare.ModelDev.Cinema4D",
+      "nameOriginal": "Cinema4D",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.Visualizations.MarmosetToolbag","flare.Visualizations.KeyShot","flare.ModelDev.Houdini","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.AEC.Revit"],
+      "developer": "Maxon",
+      "link": "https://www.maxon.net/en-us/products/cinema-4d/overview/"
+    },
+    {
+      "name": "flare.Visualizations.Katana",
+      "nameOriginal": "Katana",
+      "size": 0,
+      "imports": [ "flare.ModelDev.Modo","flare.ProcessDev.CPlusPlus","flare.ProcessDev.Python"],
+      "developer": "Foundry",
+      "link": "https://www.foundry.com/products/katana/features"
+    },
+    {
+      "name": "flare.GameEngine.Lumberyard",
+      "nameOriginal": "Lumberyard",
+      "size": 0,
+      "imports": [ "flare.DataManagement.AmazonWebServices","flare.Communication.Twitch","flare.ProcessDev.CPlusPlus","flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.ModelDev.Zbrush","flare.Graphics.Photoshop","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner","flare.Graphics.AffinityPhoto"],
+      "developer": "Amazon",
+      "link": "https://aws.amazon.com/lumberyard/"
+    },
+    {
+      "name": "flare.GameEngine.CryEngine",
+      "nameOriginal": "CryEngine",
+      "size": 0,
+      "imports": [ "flare.MixedReality.OculusRiftHMD","flare.ModelDev.Maya","flare.ModelDev.Zbrush","flare.ModelDev.3dsMax","flare.AEC.Revit","flare.ModelDev.SketchUp","flare.ModelDev.Blender","flare.ModelDev.Cinema4D","flare.ModelDev.Modo","flare.ModelDev.Houdini","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.AffinityDesigner","flare.Graphics.Illustrator"],
+      "developer": "Crytek",
+      "link": "https://www.cryengine.com/features"
+    },
+    {
+      "name": "flare.ModelDev.SpeedTree",
+      "nameOriginal": "SpeedTree",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.GameEngine.UnrealEngine","flare.GameEngine.Lumberyard","flare.ModelDev.Cinema4D","flare.ModelDev.3dsMax","flare.ModelDev.Maya","flare.Visualizations.VRay","flare.ModelDev.Houdini","flare.ModelDev.Blender","flare.Visualizations.Redshift"],
+      "developer": "IDV,Inc.",
+      "link": "https://store.speedtree.com/"
+    },
+    {
+      "name": "flare.ModelDev.MarvelousDesigner",
+      "nameOriginal": "MarvelousDesigner",
+      "size": 0,
+      "imports": [ "flare.ModelDev.Maya","flare.ModelDev.3dsMax","flare.ModelDev.Modo","flare.ModelDev.Zbrush"],
+      "developer": "CLO Virtual Fashion Inc.",
+      "link": "https://www.marvelousdesigner.com/product/features"
+    },
+    {
+      "name": "flare.ModelDev.WorldCreator",
+      "nameOriginal": "WorldCreator",
+      "size": 0,
+      "imports": [ "flare.GameEngine.UnrealEngine","flare.GameEngine.Unity","flare.GameEngine.CryEngine","flare.ModelDev.Maya","flare.ModelDev.Houdini","flare.ModelDev.3dsMax","flare.ModelDev.Cinema4D","flare.ModelDev.Mudbox","flare.ModelDev.Zbrush","flare.ModelDev.Blender","flare.GameEngine.Lumberyard","flare.MaterialDev.SubstanceDesigner","flare.MaterialDev.SubstancePainter"],
+      "developer": "BiteTheBytes",
+      "link": "https://www.world-creator.com/features/"
+    },
+    {
+      "name": "flare.Graphics.Aseprite",
+      "nameOriginal": "Aseprite",
+      "size": 0,
+      "imports": [ "flare.GameEngine.Unity","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto"],
+      "developer": "Igara Studio",
+      "link": "https://www.aseprite.org/"
+    },
+    {
+      "name": "flare.ModelDev.Mudbox",
+      "nameOriginal": "Mudbox",
+      "size": 0,
+      "imports": [ "flare.Visualizations.MarmosetToolbag","flare.Visualizations.KeyShot","flare.ModelDev.3dsMax","flare.ModelDev.Maya"],
+      "developer": "Autodesk",
+      "link": "https://www.autodesk.com/products/maya/features"
+    },
+    {
+      "name": "flare.DataManagement.Zapier",
+      "nameOriginal": "Zapier",
+      "size": 0,
+      "imports": [ "flare.ProcessDev.Python","flare.ProcessDev.JavaScript","flare.DataManagement.GoogleDrive","flare.Communication.Trello","flare.DataManagement.Dropbox","flare.DataManagement.Airtable","flare.DataManagement.Evernote","flare.ProcessDev.WordPress","flare.DataManagement.Jira","flare.ProcessDev.GitHub","flare.OfficeTools.Excel","flare.DataManagement.MySQL","flare.DataManagement.PostgreSQL","flare.DataManagement.AmazonWebServices"],
+      "developer": "Zapier Inc.",
+      "link": "https://zapier.com/apps"
+    },
+    {
+      "name": "flare.Graphics.InVision",
+      "nameOriginal": "InVision",
+      "size": 0,
+      "imports": [ "flare.DataManagement.Dropbox","flare.DataManagement.Jira","flare.Communication.Trello","flare.Communication.Teams","flare.Graphics.Photoshop","flare.Graphics.AffinityPhoto","flare.Graphics.Illustrator","flare.Graphics.AffinityDesigner"],
+      "developer": "InVisionApp Inc.",
+      "link": "https://www.invisionapp.com/home"
+    }
+  ]

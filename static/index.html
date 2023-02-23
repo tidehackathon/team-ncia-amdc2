@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Helios4CWIX</title>
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = no" />
+    
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/freeboard.css" rel="stylesheet" />
+    <link href="css/bigCircle.css" rel="stylesheet" />
+    <link href="css/tiles.css" rel="stylesheet" />
+
+    <link href="lib/css/thirdparty/jquery-ui.css" rel="stylesheet" />
+    <link href="lib/css/thirdparty/jquery-ui.structure.css" rel="stylesheet" />
+    <link href="lib/css/thirdparty/jquery-ui.theme.css" rel="stylesheet" />
+    <link href="lib/css/thirdparty/select2.css" rel="stylesheet" />
+    <link href="lib/css/thirdparty/datatables.css" rel="stylesheet" />
+
+    <script src="lib/js/thirdparty/jquery.js"></script>
+    <script src="lib/js/thirdparty/jquery-ui.js"></script>
+    <script src="lib/js/thirdparty/select2.js" defer></script>
+    <script src="lib/js/thirdparty/chart.js"></script>
+    <script src="lib/js/thirdparty/datatables.js" defer></script>
+    <script src="lib/js/thirdparty/d3v3.js"></script>
+    <script src="lib/js/thirdparty/d3v4.js"></script>
+
+    <script src="js/hardcoded.js"></script>
+
+    <script src="js/helios.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/jsonDatasourcePlugin.js"></script>
+
+    <script src="js/widgets/filterWidget.js"></script>
+    <script src="js/widgets/tableWidget.js"></script>
+    <script src="js/widgets/barChartWidget.js"></script>
+    <script src="js/widgets/textWidget.js"></script>
+    <script src="js/widgets/bigCircleWidget.js"></script>
+    <script src="js/widgets/lineChartWidget.js"></script>
+    <script src="js/widgets/networkWidget.js"></script>
+    <script src="js/widgets/tilesWidget.js"></script>
+    <script src="js/widgets/countersWidget.js"></script>
+    <script src="js/widgets/areaChartWidget.js"></script>
+        
+    <script src="js/freeboard.thirdparty.js"></script>
+    <script type="text/javascript">
+        head.js("js/freeboard_plugins.js",
+                function() {
+                    $(function() {
+                        freeboardInstance = freeboard;
+                        
+                        freeboard.initialize(true);
+                        
+                        helios.widgets.forEach(function(wLoader) {
+                            wLoader(freeboard);
+                        });
+
+                    });
+                });
+    </script>
+
+</head>
+<body>
+    <div id="tabs"></div>
+    
+    <div id="freeboardContent" style="display: none">
+        <div id="main-header" data-bind="if:allow_edit">
+            <button class="ui-button ui-widget ui-corner-all" data-bind="click: createPane">Add Pane</button>
+            <button class="ui-button ui-widget ui-corner-all" onclick="saveBoard()" >Save board</button>
+            <div id="datasources">
+                <div class="datasource-list-container">
+                    <table class="table table-condensed sub-table" id="datasources-list" data-bind="if: datasources().length">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Last Updated</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody data-bind="foreach: datasources">
+                        <tr>
+                            <td>
+                                <span class="text-button datasource-name" data-bind="text: name, pluginEditor: {operation: 'edit', type: 'datasource'}"></span>
+                            </td>
+                            <td data-bind="text: last_updated"></td>
+                            <td>
+                                <ul class="board-toolbar">
+                                    <li data-bind="click: updateNow"><i class="icon-refresh icon-white"></i></li>
+                                    <li data-bind="pluginEditor: {operation: 'delete', type: 'datasource'}">
+                                        <i class="icon-trash icon-white"></i></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <span class="text-button table-operation" data-bind="pluginEditor: {operation: 'add', type: 'datasource'}">Add Datasource</span>
+            </div>
+<!-- 
+            <div id="column-tools" class="responsive-column-width">
+                <ul class="board-toolbar left-columns">
+                    <li class="column-tool add" data-bind="click: addGridColumnLeft"><span class="column-icon right"></span><i class="icon-arrow-left icon-white"></i></li>
+                    <li class="column-tool sub" data-bind="click: subGridColumnLeft"><span class="column-icon left"></span><i class="icon-arrow-right icon-white"></i></li>
+                </ul>
+                <ul class="board-toolbar right-columns">
+                    <li class="column-tool sub" data-bind="click: subGridColumnRight"><span class="column-icon right"></span><i class="icon-arrow-left icon-white"></i></li>
+                    <li class="column-tool add" data-bind="click: addGridColumnRight"><span class="column-icon left"></span><i class="icon-arrow-right icon-white"></i></li>
+                </ul>
+            </div> -->
+        </div>
+        
+        <div id="board-content">
+            <img id="dash-logo" data-bind="attr:{src: header_image}, visible:header_image()">
+            <div class="gridster responsive-column-width">
+                <ul data-bind="grid: true">
+                </ul>
+            </div>
+        </div>
+
+        <div style="display:hidden">
+            <ul data-bind="template: { name: 'pane-template', foreach: panes}">
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/html" id="pane-template">
+        <li data-bind="pane: true">
+            <header>
+                <h1 data-bind="text: title"></h1>
+                <ul class="board-toolbar pane-tools">
+                    <li data-bind="pluginEditor: {operation: 'add', type: 'widget'}">
+                        <i class="icon-plus icon-white"></i>
+                    </li>
+                    <li data-bind="pluginEditor: {operation: 'edit', type: 'pane'}">
+                        <i class="icon-wrench icon-white"></i>
+                    </li>
+                    <li data-bind="pluginEditor: {operation: 'delete', type: 'pane'}">
+                        <i class="icon-trash icon-white"></i>
+                    </li>
+                </ul>
+            </header>
+            <section data-bind="foreach: widgets">
+                <div class="sub-section">
+                    <div class="widget" data-bind="widget: true, css:{fillsize:fillSize}"></div>
+                    <div class="sub-section-tools">
+                        <ul class="board-toolbar">
+                            <!-- ko if:$parent.widgetCanMoveUp($data) -->
+                            <li data-bind="click:$parent.moveWidgetUp"><i class="icon-chevron-up icon-white"></i></li>
+                            <!-- /ko -->
+                            <!-- ko if:$parent.widgetCanMoveDown($data) -->
+                            <li data-bind="click:$parent.moveWidgetDown"><i class="icon-chevron-down icon-white"></i></li>
+                            <!-- /ko -->
+                            <li data-bind="pluginEditor: {operation: 'edit', type: 'widget'}"><i class="icon-wrench icon-white"></i></li>
+                            <li data-bind="pluginEditor: {operation: 'delete', type: 'widget'}"><i class="icon-trash icon-white"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </li>
+    </script>
+
+<script>
+ var menuItems = [
+            {
+                id: 'cc',
+                title: 'Command Centre'
+            },
+            {
+                id: 'exercise',
+                title: 'Exercise'
+            },
+            {
+                id: 'exercisetrends',
+                title: 'Exercise Evolution'
+            },
+            {
+                id: 'nation',
+                title: 'Nation'
+            },
+            {
+                id: 'nationtrends',
+                title: 'Nation Evolution'
+            },
+            {
+                id: 'cap',
+                title: 'Capability'
+            },
+            {
+                id: 'captrends',
+                title: 'Capability Evolution'
+            },
+            {
+                id: 'io_anal',
+                title: 'IO Analytics'
+            },
+            {
+                id: 'mdo_anal',
+                title: 'MDO Analytics'
+            },
+            {
+                id: 'dp_anal',
+                title: 'DP Analytics'
+            }
+
+    ];
+
+    $(document).ready(function() {
+
+        helios.getFilterFromURLParams();
+
+        var triggeringFromURL = false;
+
+        menu($('#tabs'), menuItems, function(pageid) {
+            if(triggeringFromURL) {
+                
+                return;
+            }
+            triggeringFromURL = false;
+            helios.filters = {};
+            helios.updateFilterURLParams();
+            loadBoard(pageid);
+        });
+
+        if(window.location.hash) { ///////wheeeen we directly visit a URL!!!!!!!!!!!!the option active triggers randomly somehow
+            var id = window.location.hash.split('?')[0].substr(1);
+            for(var i = 0; i < menuItems.length; i++) {
+                if (menuItems[i].id == id) {
+                    triggeringFromURL = true;
+                    $('#tabs').tabs('option', 'active', i);
+                    helios.updateFilterURLParams();
+                    loadBoard(id);
+                    triggeringFromURL = false;
+                    break;
+                }
+            }
+        }
+        else {
+            window.location.hash = menuItems[0].id;
+            $('#tabs').tabs('option', 'active', 0);
+            loadBoard(menuItems[0].id);
+        }
+    });
+    
+</script>
+
+</body> 
+</html>
