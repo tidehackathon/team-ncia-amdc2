@@ -40,8 +40,12 @@ helios.widgets.push(function (freeboard) {
                             //stacked: true
                         },
                         y: {
-                            stacked: true
-                        }
+                            display: true,
+                            position: 'left',
+                            stacked: true,
+                            beginAtZero: true
+                           }
+
                     }
                 }
             });
@@ -70,7 +74,7 @@ helios.widgets.push(function (freeboard) {
                 allLabels = Object.keys(allLabels).sort((l1, l2) => {
                     return l1 > l2 ? 1 : -1;
                 });
-                //console.debug('Got labels ' + allLabels + ' from ' + items.length + ' items. Filters: ' + JSON.stringify(helios.filters));
+                console.debug('Got labels ' + allLabels + ' from ' + items.length + ' items. Filters: ' + JSON.stringify(helios.filters));
                 updateChartWithData(thisChart, items, valueCol, designator);
             }
         }
@@ -78,7 +82,7 @@ helios.widgets.push(function (freeboard) {
         function updateChartWithData(chart, items, valueCol, designator) {
             var groupedItems = items.reduce((coll, item) => {
                 var datasetLabel = item[designator].toLowerCase();
-                if(!domainColors[datasetLabel]) return coll;
+                //if(!domainColors[datasetLabel]) return coll;
 
                 if (!coll[datasetLabel]) coll[datasetLabel] = {};
 
@@ -99,6 +103,8 @@ helios.widgets.push(function (freeboard) {
                 datasetNames = Object.keys(domainColors);
             }
             var order = 1;
+            var lName = 'y';
+            var lCounter = 1;
             chart.data.datasets = datasetNames.map((gik) => {
                 var returnDataset = {
                     label: gik,
@@ -107,8 +113,10 @@ helios.widgets.push(function (freeboard) {
                         return groupedItems[gik][l] || 0
                     }),
                     order: order++,
-                    fill: true
+                    fill: true,
+                    yAxisID: lName
                 };
+                //if(lName == 'y') lName = 'y1';
                 if(domainColors[gik]) {
                     returnDataset.label = domainColors[gik].name;
                     returnDataset.backgroundColor = domainColors[gik].color;
@@ -118,7 +126,7 @@ helios.widgets.push(function (freeboard) {
             
             chart.update();
 
-            chart.canvas.parentNode.style.height = datasetNames.length * 100 + 'px';//????
+            chart.canvas.parentNode.style.height = Math.max(datasetNames.length * 100, 500) + 'px';//????
         }
 
         this.onDispose = function () {

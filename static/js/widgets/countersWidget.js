@@ -28,12 +28,12 @@ helios.widgets.push(function (freeboard) {
 
         this.onCalculatedValueChanged = function (settingName, newValue) {
             if (settingName == 'ds') {
-                var catCounts = newValue[1].reduce((coll, item) => {
+                var catCounts = (newValue[1] || []).reduce((coll, item) => {
                     var categ = item[categCol];
                     if (!coll[categ]) coll[categ] = 0;
                     
                     if(numberCol) {
-                        coll[categ] = score2(item[numberCol], item[totalCol]);
+                        coll[categ] = getScore2(item[numberCol], item[totalCol]);
                     } else {
                         var amountVal = parseInt(item[counterCol]) == item[counterCol] ? parseInt(item[counterCol]) : 1;
                         coll[categ] += amountVal;
@@ -45,7 +45,7 @@ helios.widgets.push(function (freeboard) {
                 var sum = 0;
 
                 var categList = Object.keys(catCounts);
-                if (domains.indexOf(categList[0]) >=0) {
+                if (domains.indexOf(categList[0]) >=0 || newValue[0][0].operational_domain_name) {
                     categList = domains;
                 }
 
@@ -55,13 +55,20 @@ helios.widgets.push(function (freeboard) {
                         sum += nr;
                     });
                 } else {
+                    categList.forEach((cat) => {
+                        if(!catCounts[cat])
+                            catCounts[cat] = '0';
 
+                    });
                 }
 
                 numbersRow.html('');
                 labelsRow.html('');
                 categList.forEach((cat) => {
                     var valLabel = useIndicators ? ' ' : getPercentage(parseInt(catCounts[cat] || '0'), sum) + '%';
+                    if(numberCol && !useIndicators) {
+                        valLabel = catCounts[cat];
+                    }
                     var nrCell = $('<td></td>')
                         .html(valLabel)
                         .appendTo(numbersRow);

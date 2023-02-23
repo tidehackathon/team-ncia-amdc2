@@ -87,7 +87,7 @@ function processResultsByNation(datasources) {
 
 function getScore2(nr1, nr2) {
     if(!nr1) nr1 = 0;
-    if(!nr2) nr2 = 0;
+    if(!nr2) nr2 = 1;
     nr1 = parseInt(nr1);
     nr2 = parseInt(nr2);
     return Math.floor((nr1/nr2) * 100) / 10;
@@ -95,4 +95,40 @@ function getScore2(nr1, nr2) {
 
 function getScore(perc) {
     return parseInt(perc) / 10;
+}
+
+function buildNationsTable(ds) {
+    var nationMap = ds[1].reduce(function(coll, item) {
+        if(!coll[item.nation_name]) coll[item.nation_name] = 0;
+        
+        coll[item.nation_name] = getScore2(item.success_count, item.test_count);
+        
+        return coll;
+    }, {});
+    return Object.keys(nationMap).sort(function(na, nb) {
+        return nationMap[na] < nationMap[nb] ? 1 : -1;
+    }).map(function(n) {
+        return {
+            'Nation': n,
+            'IO Score': nationMap[n]
+        };
+    });
+}
+
+function buildCapsTable(ds) {
+    var nationMap = ds[1].reduce(function(coll, item) {
+        if(!coll[item.capability_name]) coll[item.capability_name] = 0;
+        
+        coll[item.capability_name] = getScore2(item.success_count, item.test_count);
+        
+        return coll;
+    }, {});
+    return Object.keys(nationMap).sort(function(na, nb) {
+        return nationMap[na] < nationMap[nb] ? 1 : -1;
+    }).map(function(n) {
+        return {
+            'Capability': n,
+            'IO Score': nationMap[n]
+        };
+    });
 }

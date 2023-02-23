@@ -5,7 +5,7 @@
 var helios = {
     widgets: [],
     filters: {},
-    admin: localStorage.gijs ? false: true ,
+    admin: localStorage.gijs ? false : true ,
     dataSources: {},
     addFilter: function(name, value) {
         value = value+'';

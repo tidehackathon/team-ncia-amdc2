@@ -6,13 +6,15 @@ helios.widgets.push(function addTableWidget(freeboard) {
         var oldValue = '';
         var container = $('<table style="width: 100%"></table>');
         var items;
+        var itemsP;
         var dt = null;
         var valTypeSelector = $('<input type="checkbox" checked="true" name="valChanger" style="width: 24px; float: right;"></input>');
+        var valTypeLabel = $('<label for="valChanger" style="float: right;">Percentages</label>');
         var height = settings.height;
 
         this.render = function (element) {
             $(element).empty();
-            $(element).append($('<label for="valChanger" style="float: right;">Percentages</label>'));
+            $(element).append(valTypeLabel);
             $(element).append(valTypeSelector);
             $(element).append(container);
 
@@ -40,18 +42,28 @@ helios.widgets.push(function addTableWidget(freeboard) {
 
         this.onCalculatedValueChanged = function (settingName, newValue) {
             if (settingName == 'value') {
-                newValue = newValue[1];
-                if (oldValue != JSON.stringify(newValue)) {
-                    oldValue = JSON.stringify(newValue);
-                    items = newValue;
-                    itemsP = items.map(function (i) {
-                        return {
-                            'Focus Area': i['Focus Area'],
-                            'Tests assigned': i['Tests assigned'],
-                            'Tests executed': i['Tests assigned'] == 0 ? 0 : Math.floor((i['Tests executed'] / i['Tests assigned']) * 100) + '%',
-                            'Tests passed': i['Tests assigned'] == 0 ? 0 : Math.floor((i['Tests passed'] / i['Tests assigned']) * 100) + '%'
+                if (oldValue != JSON.stringify(newValue[1])) {
+                    oldValue = JSON.stringify(newValue[1]);
+                    items = newValue[1];
+                    if(items.length > 0 && newValue.length == 3) {
+                        itemsP = items.map(function (i) {
+                            return {
+                                'Focus Area': i['Focus Area'],
+                                'Tests assigned': i['Tests assigned'],
+                                'Tests executed': i['Tests assigned'] == 0 ? 0 : Math.floor((i['Tests executed'] / i['Tests assigned']) * 100) + '%',
+                                'Tests passed': i['Tests assigned'] == 0 ? 0 : Math.floor((i['Tests passed'] / i['Tests assigned']) * 100) + '%'
+                            }
+                        });
+                    } else if(items.length && (items[0]['Nation'] || items[0]['Capability'])) {
+                        if(valTypeLabel) {
+                            valTypeLabel.remove();
+                            valTypeLabel = null;
                         }
-                    });
+                        if(valTypeSelector) {
+                            valTypeSelector.remove();
+                            valTypeSelector = null;
+                        }
+                    }
                 } else {
                     return;
                 }
@@ -63,7 +75,7 @@ helios.widgets.push(function addTableWidget(freeboard) {
                 });
                 if (!dt) {
                     dt = container.DataTable({
-                        data: valTypeSelector.is(':checked') ? itemsP : items,
+                        data: (valTypeSelector && valTypeSelector.is(':checked')) ? itemsP : items,
                         columns: columns,
                         paging: false,
                         searching: false,
@@ -85,7 +97,7 @@ helios.widgets.push(function addTableWidget(freeboard) {
                     });
                 } else {
                     dt.clear();
-                    (valTypeSelector.is(':checked') ? itemsP : items).forEach((i) => {
+                    ((valTypeSelector && valTypeSelector.is(':checked')) ? itemsP : items).forEach((i) => {
                         container.dataTable().fnAddData(i);
                     });
                     dt.draw();
