@@ -1,7 +1,7 @@
 # thtw23
 
 ## User Guide
-The user guide can be found [here](https://tide.act.nato.int/mediawiki/tidepedia/images/2/2c/TIDE_Hackathon_2023_-_Analytics_Dashboard_for_Interoperability_NCIA_AMDC2_-_User_Guide.pdf)
+The user guide can be found [here](https://tide.act.nato.int/mediawiki/tidepedia/images/2/2c/TIDE_Hackathon_2023_-_Analytics_Dashboard_for_Interoperability_NCIA_AMDC2_-_User_Guide.pdf).
 
 ## Team: NCIA AMCD2
 
@@ -9,9 +9,7 @@ The user guide can be found [here](https://tide.act.nato.int/mediawiki/tidepedia
 
 This is a simple Python3 Flask webapplication.
 
-Create a Python virtual environment in this folder (in venv) and activate it.
-
-Install whatever is in requirements.txt
+Create a Python virtual environment in this folder (in venv) and activate it. Install whatever is in requirements.txt
 
 ## Required Environment Variables
 
