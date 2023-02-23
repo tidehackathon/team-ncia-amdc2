@@ -193,29 +193,19 @@
                 title: 'Capability Evolution'
             },
             {
-                id: 'io_anal',
-                title: 'IO Analytics'
-            },
-            {
-                id: 'mdo_anal',
-                title: 'MDO Analytics'
-            },
-            {
-                id: 'dp_anal',
-                title: 'DP Analytics'
+                id: 'io_c',
+                title: 'Interoperability Centre'
             }
-
     ];
 
     $(document).ready(function() {
 
         helios.getFilterFromURLParams();
 
-        var triggeringFromURL = false;
+        var triggeringFromURL = false; //sneaky dirty trick!!!!!!!
 
         menu($('#tabs'), menuItems, function(pageid) {
             if(triggeringFromURL) {
-                
                 return;
             }
             triggeringFromURL = false;

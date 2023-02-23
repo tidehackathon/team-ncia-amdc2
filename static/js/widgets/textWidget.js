@@ -6,7 +6,7 @@ helios.widgets.push(function addTableWidget(freeboard) {
 
         var h = settings.h;
 
-        var content = $('<div></div>');
+        var content = $('<div style="text-align: center;"></div>');
 
         this.render = function (element) {
             $(element).empty();

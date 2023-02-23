@@ -11,6 +11,9 @@ helios.widgets.push(function (freeboard) {
         var categCol = settings.categories_col || 'operational_domain_name';
         var counterCol = settings.counter_col || 'capability_count';
 
+        var numberCol = settings.number_col;
+        var totalCol = settings.total_col;
+
         var useIndicators = settings.use_indicators;
 
         this.render = function (element) {
@@ -26,27 +29,58 @@ helios.widgets.push(function (freeboard) {
         this.onCalculatedValueChanged = function (settingName, newValue) {
             if (settingName == 'ds') {
                 var catCounts = newValue[1].reduce((coll, item) => {
-                    if (!coll[item[categCol]]) coll[item[categCol]] = 0;
-                    var amountVal = parseInt(item[counterCol]) == item[counterCol] ? parseInt(item[counterCol]) : 1;
-                    coll[item[categCol]] += amountVal;
+                    var categ = item[categCol];
+                    if (!coll[categ]) coll[categ] = 0;
+                    
+                    if(numberCol) {
+                        coll[categ] = score2(item[numberCol], item[totalCol]);
+                    } else {
+                        var amountVal = parseInt(item[counterCol]) == item[counterCol] ? parseInt(item[counterCol]) : 1;
+                        coll[categ] += amountVal;
+                    }
+
                     return coll;
                 }, {});
 
+                var sum = 0;
+
+                var categList = Object.keys(catCounts);
+                if (domains.indexOf(categList[0]) >=0) {
+                    categList = domains;
+                }
+
+                if(!numberCol) {
+                    categList.forEach((cat) => {
+                        var nr = parseInt(catCounts[cat] || '0');
+                        sum += nr;
+                    });
+                } else {
+
+                }
+
                 numbersRow.html('');
                 labelsRow.html('');
-                domains.forEach((cat) => {
-                    var valLabel = useIndicators ? ' ' : catCounts[cat] || '0';
+                categList.forEach((cat) => {
+                    var valLabel = useIndicators ? ' ' : getPercentage(parseInt(catCounts[cat] || '0'), sum) + '%';
                     var nrCell = $('<td></td>')
                         .html(valLabel)
                         .appendTo(numbersRow);
                     $('<td></td>')
                         .html(cat.toUpperCase())
                         .appendTo(labelsRow);
+                    if(useIndicators) {
+                        nrCell.append($('<div class="counterIndicator"></div>'));
+                    }
                     if(useIndicators && catCounts[cat]) {
-                        nrCell.css('background-color', 'lightgreen');
+                        nrCell.find('div').css('background-color', '#A2C67C');
                     }
                 });
             }
+        }
+
+        function getPercentage(nr, total) {
+            if(!total) total = 0;
+            return Math.round((nr / total) * 100)
         }
 
         this.onDispose = function () {
@@ -90,6 +124,16 @@ helios.widgets.push(function (freeboard) {
                 name: 'use_indicators',
                 display_name: 'Use boolean indicators',
                 type: 'boolean'
+            },
+            {
+                name: 'number_col',
+                display_name: 'Number column',
+                type: 'text'
+            }, 
+            {
+                name: 'total_col',
+                display_name: 'Total column',
+                type: 'text'
             }
         ],
         newInstance: function (settings, newInstanceCallback) {

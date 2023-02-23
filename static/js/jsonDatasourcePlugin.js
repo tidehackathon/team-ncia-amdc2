@@ -1,3 +1,5 @@
+var dataCache = {}; ///stupid sneaky tricks time again!!!
+
 helios.widgets.push(function loadJsonDataSourcePlugin(freeboard) {
     var jsonDatasource = function (settings, updateCallback) {
 		var self = this;
@@ -39,8 +41,14 @@ helios.widgets.push(function loadJsonDataSourcePlugin(freeboard) {
 
 		this.updateNow = function () {
 			//console.debug('getting data from' + currentSettings.url);
+			if(dataCache[currentSettings.url]) {
+				data = dataCache[currentSettings.url];
+				updateCallback([data, filterData(data)]);
+				return;
+			}
 			$.get(currentSettings.url, function(res) {
 				data = res;
+				dataCache[currentSettings.url] = data;
 				updateCallback([res, filterData(res)]);
 			});
 		}

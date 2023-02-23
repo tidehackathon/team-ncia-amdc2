@@ -13,7 +13,7 @@ helios.widgets.push(function addBarChartWidget(freeboard) {
         var chartCont2 = $('<canvas></canvas>');
         var chartCont3 = $('<canvas></canvas>');
 
-        var valTypeSelector = $('<input type="checkbox" name="valChanger" style="width: 24px"></input>');
+        var valTypeSelector = $('<input type="checkbox" name="valChanger" style="width: 24px; float: right;"></input>');
 
         var height = settings.height;
         var horizontal = settings.horizontal == 'true';
@@ -45,7 +45,7 @@ helios.widgets.push(function addBarChartWidget(freeboard) {
 
         this.render = function (element) {
             $(element).empty();
-            $(element).append($('<label for="valChanger">Use Percentages</label>'));
+            $(element).append($('<label for="valChanger" style="float: right;">Percentages</label>'));
             $(element).append(valTypeSelector);
             valTypeSelector
                 .on('change', (e) => {
@@ -112,6 +112,11 @@ helios.widgets.push(function addBarChartWidget(freeboard) {
                         y: {
                             stacked: true
                         }
+                    },
+                    plugins: {
+                        legend: {
+                            display: designator != '>Capabilities'
+                        }
                     }
                 }
             });
@@ -119,9 +124,9 @@ helios.widgets.push(function addBarChartWidget(freeboard) {
 
         this.onSettingsChanged = function (newSettings) {
             if (newSettings.horizontal != currentSettings.horizontal) {
-                horizontal = (typeof newSettings.horizontal == 'boolean') ? newSettings.horizontal : newSettings.horizontal == 'true';
-                chart.options.indexAxis = horizontal ? 'x' : 'y';
-                chart.update();
+                // horizontal = (typeof newSettings.horizontal == 'boolean') ? newSettings.horizontal : newSettings.horizontal == 'true';
+                // chart.options.indexAxis = horizontal ? 'x' : 'y';
+                // chart.update();
             }
             currentSettings = newSettings;
         }
@@ -137,18 +142,28 @@ helios.widgets.push(function addBarChartWidget(freeboard) {
                 }
                 if (items.length == 0) return;
 
-
-                allLabels = {};
+                if(designator == '>Capabilities') {
+                    allLabels = domains.reduce(function(coll, item) {
+                        coll[item] = 0;
+                        return coll;
+                    }, {});
+                } else {
+                    allLabels = {};
+                }
+                
                 items.forEach((i) => {
-                    if (!allLabels[i[labelsCol]]) allLabels[i[labelsCol]] = 0;
-                    allLabels[i[labelsCol]] += parseInt(i[valueCol]);
+                    var lbl = i[labelsCol];
+                    if (!allLabels[lbl]) allLabels[lbl] = 0;
+                    allLabels[lbl] += parseInt(i[valueCol]);
                 });
                 
-
-                allLabels = Object.keys(allLabels).sort((l1, l2) => {
-                    return allLabels[l1] < allLabels[l2] ? 1 : -1;
-                });
-
+                if(designator != '>Capabilities') {
+                    allLabels = Object.keys(allLabels).sort((l1, l2) => {
+                        return allLabels[l1] < allLabels[l2] ? 1 : -1;
+                    });
+                } else {
+                    allLabels = Object.keys(allLabels)
+                }
                 thisChart = chart1;
                 if (valTypeSelector.is(':checked')) {
                         updateChartWithData(thisChart, items, percCol, designator);
@@ -163,15 +178,15 @@ helios.widgets.push(function addBarChartWidget(freeboard) {
 
         function updateChartWithData(chart, items, valueCol, designator) {
             var groupedItems = items.reduce((coll, item) => {
-                var datasetLabel = item[designator].toLowerCase();
-                if(!domainColors[datasetLabel]) return coll;
+                var datasetLabel = designator.indexOf('>') == 0 ? designator.substr(1) : item[designator].toLowerCase();
+                //if(!domainColors[datasetLabel]) return coll;
 
                 if (!coll[datasetLabel]) coll[datasetLabel] = {};
 
                 var val = item[valueCol];
                 var amountVal = parseInt(val) == val ? parseInt(val) : 1;
 
-                var chartLabel = item[labelsCol]
+                var chartLabel = item[labelsCol];
                 if(!coll[datasetLabel][chartLabel]) coll[datasetLabel][chartLabel] = 0; 
                 coll[datasetLabel][chartLabel] += amountVal;
 
@@ -181,19 +196,26 @@ helios.widgets.push(function addBarChartWidget(freeboard) {
             chart.data.labels = allLabels;
             
             var datasetNames = Object.keys(groupedItems);
-            if(domainColors[datasetNames[0]]) {
+            if(domainColors[datasetNames[0]] && Object.keys(groupedItems)[0] != 'Capabilities') {
                 datasetNames = Object.keys(domainColors);
             }
             var order = 1;
             chart.data.datasets = datasetNames.map((gik) => {
                 var returnDataset = {
                     label: gik,
-                    data: allLabels.map((l) => {return groupedItems[gik][l] || 0}),
+                    data: allLabels.map((l) => {
+                        if (!groupedItems[gik]) return 0;
+                        return groupedItems[gik][l] || 0;
+                    }),
                     order: order++
                 };
                 if(domainColors[gik]) {
                     returnDataset.label = domainColors[gik].name;
                     returnDataset.backgroundColor = domainColors[gik].color;
+                } else {
+                    returnDataset.backgroundColor = domains.map(function(d) {
+                        return domainColors[d.toLowerCase()].color; 
+                    });
                 }
                 returnDataset.barThickness = itemThickness;
                 return returnDataset;
@@ -201,7 +223,7 @@ helios.widgets.push(function addBarChartWidget(freeboard) {
             
             chart.update();
 
-            chart.canvas.parentNode.style.height = allLabels.length * (itemThickness * 1.68) + 'px';//????
+            chart.canvas.parentNode.style.height = designator == '>Capabilities' ? '250px' : allLabels.length * (itemThickness * 1.68) + 'px';//????
         }
 
         this.onDispose = function () {
