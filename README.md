@@ -1,6 +1,6 @@
 # thtw23
 
-[User Guide](https://tide.act.nato.int/mediawiki/tidepedia/images/2/2c/TIDE_Hackathon_2023_-_Analytics_Dashboard_for_Interoperability_NCIA_AMDC2_-_User_Guide.pdf)
+## [User Guide](https://tide.act.nato.int/mediawiki/tidepedia/images/2/2c/TIDE_Hackathon_2023_-_Analytics_Dashboard_for_Interoperability_NCIA_AMDC2_-_User_Guide.pdf)
 
 ## Team: NCIA AMCD2
 
